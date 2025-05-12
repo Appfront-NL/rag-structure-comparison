@@ -4,6 +4,7 @@
 #SBATCH -N 1
 #SBATCH --ntasks-per-node=1
 #SBATCH -p defq
+#SBATCH --gres=gpu:1
 #SBATCH --output=slurm-%j.out
 
 # Load GPU modules
