@@ -2,13 +2,14 @@ import pandas as pd
 import mteb
 import random
 from collections import defaultdict
-random.seed(42)
 
 # Display settings
 pd.set_option("display.max_columns", None)
 pd.set_option("display.max_rows", None)
 pd.set_option("display.width", 1000)
 pd.set_option("display.max_colwidth", 100)
+
+MODEL_NAME = "intfloat/multilingual-e5-large-instruct"
 
 # Load benchmark and tasks
 benchmark = mteb.get_benchmark("MTEB(Europe, v1)")
@@ -25,9 +26,9 @@ random.seed(43)
 sampled_tasks = [random.choice(task_list) for task_list in type_to_tasks.values()]
 
 # model_name = "intfloat/multilingual-e5-small"
-model_name = "intfloat/multilingual-e5-large-instruct"
 
-model = mteb.get_model(model_name)
+
+model = mteb.get_model(MODEL_NAME)
 
 # Run evaluation
 evaluation = mteb.MTEB(tasks=sampled_tasks)
@@ -44,7 +45,7 @@ if isinstance(results, list):
     if test_scores:
         main_score = test_scores[0].get("main_score", None)
         data.append({
-            "model_name": model_name,
+            "model_name": MODEL_NAME,
             "task_name": task_result.task,
             "subset": "test",
             "main_score": main_score,
@@ -55,7 +56,7 @@ else:
     for task_name, subsets in results.items():
         for subset_name, metrics in subsets.items():
             data.append({
-                "model_name": model_name,
+                "model_name": MODEL_NAME,
                 "task_name": task_name,
                 "subset": subset_name,
                 "main_score": metrics.get("main_score", None),

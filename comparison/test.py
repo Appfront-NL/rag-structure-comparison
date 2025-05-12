@@ -1,59 +1,76 @@
-import pandas as pd
 import mteb
+import random
+from collections import defaultdict
 
 # # Set pandas display options
-pd.set_option("display.max_columns", None)
-pd.set_option("display.max_rows", None)  # Show all rows
-pd.set_option("display.width", 1000)   # adjust width to your terminal
-pd.set_option("display.max_colwidth", 100)  # adjust to show long content
+# pd.set_option("display.max_columns", None)
+# pd.set_option("display.max_rows", None)  # Show all rows
+# pd.set_option("display.width", 1000)   # adjust width to your terminal
+# pd.set_option("display.max_colwidth", 100)  # adjust to show long content
 
+
+
+# Load benchmark and tasks
 benchmark = mteb.get_benchmark("MTEB(Europe, v1)")
 tasks = benchmark.tasks
-    
-df = tasks.to_dataframe(properties=["name", "languages", "type"])
-# print(df)
+
+# Group tasks by their 'type'
+type_to_tasks = defaultdict(list)
+for task in tasks:
+    task_type = task.metadata.type  # this is the correct way to access type
+    type_to_tasks[task_type].append(task)
+
+# Sample one task per type
+random.seed(43)
+sampled_tasks = [random.choice(task_list) for task_list in type_to_tasks.values()]
+
+# Sanity check
+print("Sampled tasks by type:")
+for task in sampled_tasks:
+    print(task)
+    print('\n\n')
 
 
 
 # Use E5 model (requires prompt handling, so use MTEB's wrapper)
 # model_name = "intfloat/multilingual-e5-large-instruct"
-model_name = "intfloat/multilingual-e5-small"
-model = mteb.get_model(model_name)
+# model_name = "intfloat/multilingual-e5-small"
+# model = mteb.get_model(model_name)
 
-# Select task
-# tasks = mteb.get_tasks(tasks=["Banking77Classification"])
+# # Select task
+# # tasks = mteb.get_tasks(tasks=["Banking77Classification"])
 
-# Run evaluation
-evaluation = mteb.MTEB(tasks=tasks)
-results = evaluation.run(model, output_folder="results", return_all_scores=True)
+# # Run evaluation
+# evaluation = mteb.MTEB(tasks=tasks)
+# results = evaluation.run(model, output_folder="results", return_all_scores=True)
 
-data = []
+# data = []
 
-# If only one task, results is a list of TaskResult objects
-if isinstance(results, list):
-    task_result = results[0]  # Only one task result
-    scores = task_result.scores  # This is a dict like {"test": [ {...}, ... ]}
-    test_scores = scores.get("test", [])
-    if test_scores:
-        main_score = test_scores[0].get("main_score", None)
-        data.append({
-            "model_name": model_name,
-            "task_name": task_result.task,
-            "subset": "test",
-            "main_score": main_score,
-            **test_scores[0]
-        })
+# # If only one task, results is a list of TaskResult objects
+# if isinstance(results, list):
+#     task_result = results[0]  # Only one task result
+#     scores = task_result.scores  # This is a dict like {"test": [ {...}, ... ]}
+#     test_scores = scores.get("test", [])
+#     if test_scores:
+#         main_score = test_scores[0].get("main_score", None)
+#         data.append({
+#             "model_name": model_name,
+#             "task_name": task_result.task,
+#             "subset": "test",
+#             "main_score": main_score,
+#             **test_scores[0]
+#         })
 
-else:
-    for task_name, subsets in results.items():
-        for subset_name, metrics in subsets.items():
-            data.append({
-                "model_name": model_name,
-                "task_name": task_name,
-                "subset": subset_name,
-                "main_score": metrics.get("main_score", None),
-                **metrics
-            })
+# else:
+#     for task_name, subsets in results.items():
+#         for subset_name, metrics in subsets.items():
+#             data.append({
+#                 "model_name": model_name,
+#                 "task_name": task_name,
+#                 "subset": subset_name,
+#                 "main_score": metrics.get("main_score", None),
+#                 **metrics
+#             })
 
-df = pd.DataFrame(data)
-print(df)
+# df = pd.DataFrame(data)
+# print(df)
