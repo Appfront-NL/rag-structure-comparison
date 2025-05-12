@@ -6,6 +6,11 @@
 #SBATCH -p defq
 #SBATCH --output=slurm-%j.out
 
+# Load GPU modules
+. /etc/bashrc
+. /etc/profile.d/lmod.sh
+module load cuda12.3/toolkit
+module load cuDNN/cuda12.3
 # Load Conda from scratch installation
 # source /var/scratch/tkl206/anaconda3/etc/profile.d/conda.sh
 # conda activate myenv
