@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH --job-name=mteb_test
-#SBATCH --time=00:30:00
+#SBATCH --time=00:15:00
 #SBATCH -N 1
 #SBATCH --ntasks-per-node=1
 #SBATCH -p defq

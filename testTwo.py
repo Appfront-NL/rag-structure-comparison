@@ -1,5 +1,7 @@
 import pandas as pd
 import mteb
+import random
+random.seed(42)
 
 # Display settings
 pd.set_option("display.max_columns", None)
@@ -9,7 +11,7 @@ pd.set_option("display.max_colwidth", 100)
 
 # Benchmark and model
 benchmark = mteb.get_benchmark("MTEB(Europe, v1)")
-tasks = benchmark.tasks  # ✅ Run only the first task to keep it quick and light
+tasks = random.sample(benchmark.tasks, 3)  # ✅ Run only the first task to keep it quick and light
 # model_name = "intfloat/multilingual-e5-small"
 model_name = "intfloat/multilingual-e5-large-instruct"
 
