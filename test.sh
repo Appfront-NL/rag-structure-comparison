@@ -1,21 +1,14 @@
 #!/bin/bash
-#SBATCH --job-name=mteb_test
+#SBATCH --job-name=mteb_cpu_test
 #SBATCH --time=00:30:00
 #SBATCH -N 1
 #SBATCH --ntasks-per-node=1
-#SBATCH -p defq
-#SBATCH --gres=gpu:1
+#SBATCH -p longq         # or defq if you're running during night/weekend
 #SBATCH --output=slurm-%j.out
 
-# Load GPU modules
-. /etc/bashrc
-. /etc/profile.d/lmod.sh
-module load cuda12.3/toolkit
-module load cuDNN/cuda12.3
-
-# Activate conda
-source /var/scratch/<your-username>/anaconda3/bin/activate
-conda activate myenv  # Replace with your env name if different
+# Activate conda (no GPU needed)
+source /var/scratch/tkl206/anaconda3/bin/activate
+conda activate myenv  # use your actual conda env name
 
 # Run the test
 mkdir -p $HOME/mteb_test/results
