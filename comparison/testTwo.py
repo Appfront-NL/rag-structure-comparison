@@ -1,32 +1,23 @@
 import pandas as pd
 import mteb
 
-# # Set pandas display options
+# Display settings
 pd.set_option("display.max_columns", None)
-pd.set_option("display.max_rows", None)  # Show all rows
-pd.set_option("display.width", 1000)   # adjust width to your terminal
-pd.set_option("display.max_colwidth", 100)  # adjust to show long content
+pd.set_option("display.max_rows", None)
+pd.set_option("display.width", 1000)
+pd.set_option("display.max_colwidth", 100)
 
+# Benchmark and model
 benchmark = mteb.get_benchmark("MTEB(Europe, v1)")
-tasks = benchmark.tasks
-    
-df = tasks.to_dataframe(properties=["name", "languages", "type"])
-# print(df)
-
-
-
-# Use E5 model (requires prompt handling, so use MTEB's wrapper)
-# model_name = "intfloat/multilingual-e5-large-instruct"
+tasks = benchmark.tasks[:1]  # ✅ Run only the first task to keep it quick and light
 model_name = "intfloat/multilingual-e5-small"
 model = mteb.get_model(model_name)
-
-# Select task
-# tasks = mteb.get_tasks(tasks=["Banking77Classification"])
 
 # Run evaluation
 evaluation = mteb.MTEB(tasks=tasks)
 results = evaluation.run(model, output_folder="results", return_all_scores=True)
 
+# Collect and save results
 data = []
 
 # If only one task, results is a list of TaskResult objects
@@ -56,4 +47,5 @@ else:
             })
 
 df = pd.DataFrame(data)
+df.to_csv("results/summary.csv", index=False)
 print(df)

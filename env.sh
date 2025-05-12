@@ -14,7 +14,7 @@ install() {
 
 run() {
     echo "Running script using Conda environment '$ENV_NAME'..."
-    conda run -n "$ENV_NAME" python comparison/test.py
+    conda run -n "$ENV_NAME" python comparison/testTwo.py
 }
 
 clean() {
