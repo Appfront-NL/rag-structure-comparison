@@ -1,0 +1,103 @@
+Created GritLM: torch.float16 dtype, mean pool, embedding mode, cccc attn
+─────────────────────────────── Selected tasks  ────────────────────────────────
+BitextMining
+    - BornholmBitextMining, s2s
+
+
+Classification
+    - ItaCaseholdClassification, s2s
+
+
+Clustering
+    - BigPatentClustering.v2, p2p
+
+
+InstructionRetrieval
+    - News21InstructionRetrieval, s2p
+
+
+MultilabelClassification
+    - MalteseNewsClassification, s2s
+
+
+PairClassification
+    - RTE3, s2s, multilingual 4 / 4 Subsets
+
+
+Reranking
+    - WikipediaRerankingMultilingual, s2p, multilingual 11 / 16 Subsets
+
+
+Retrieval
+    - SCIDOCS, s2p
+
+
+STS
+    - SICK-R-PL, s2s
+
+
+Encoding 2x500 sentences:   0%|          | 0/2 [00:00<?, ?it/s]
+Batches:   0%|          | 0/2 [00:00<?, ?it/s][A
+Batches:  50%|█████     | 1/2 [00:11<00:11, 11.33s/it][A
+Batches: 100%|██████████| 2/2 [00:16<00:00,  7.55s/it][ABatches: 100%|██████████| 2/2 [00:16<00:00,  8.12s/it]
+Encoding 2x500 sentences:  50%|█████     | 1/2 [00:16<00:16, 16.24s/it]
+Batches:   0%|          | 0/2 [00:00<?, ?it/s][A
+Batches:  50%|█████     | 1/2 [00:12<00:12, 12.43s/it][A
+Batches: 100%|██████████| 2/2 [00:17<00:00,  8.07s/it][ABatches: 100%|██████████| 2/2 [00:17<00:00,  8.73s/it]
+Encoding 2x500 sentences: 100%|██████████| 2/2 [00:33<00:00, 16.96s/it]Encoding 2x500 sentences: 100%|██████████| 2/2 [00:33<00:00, 16.85s/it]
+Matching sentences:   0%|          | 0/1 [00:00<?, ?it/s]Matching sentences: 100%|██████████| 1/1 [00:00<00:00, 18.82it/s]
+Error while evaluating ItaCaseholdClassification: [Errno 122] Disk quota exceeded
+Traceback (most recent call last):
+  File "/home/tkl206/rag-structure-comparison/MultiLingual/LargeModelWithSample.py", line 35, in <module>
+    results = evaluation.run(model, output_folder="results", return_all_scores=True)
+  File "/var/scratch/tkl206/anaconda3/envs/myenv/lib/python3.10/site-packages/mteb/evaluation/MTEB.py", line 672, in run
+    raise e
+  File "/var/scratch/tkl206/anaconda3/envs/myenv/lib/python3.10/site-packages/mteb/evaluation/MTEB.py", line 576, in run
+    task.load_data(**kwargs)
+  File "/var/scratch/tkl206/anaconda3/envs/myenv/lib/python3.10/site-packages/mteb/abstasks/AbsTask.py", line 203, in load_data
+    self.dataset = datasets.load_dataset(**self.metadata_dict["dataset"])  # type: ignore
+  File "/var/scratch/tkl206/anaconda3/envs/myenv/lib/python3.10/site-packages/datasets/load.py", line 2084, in load_dataset
+    builder_instance.download_and_prepare(
+  File "/var/scratch/tkl206/anaconda3/envs/myenv/lib/python3.10/site-packages/datasets/builder.py", line 925, in download_and_prepare
+    self._download_and_prepare(
+  File "/var/scratch/tkl206/anaconda3/envs/myenv/lib/python3.10/site-packages/datasets/builder.py", line 979, in _download_and_prepare
+    split_generators = self._split_generators(dl_manager, **split_generators_kwargs)
+  File "/var/scratch/tkl206/anaconda3/envs/myenv/lib/python3.10/site-packages/datasets/packaged_modules/parquet/parquet.py", line 49, in _split_generators
+    data_files = dl_manager.download_and_extract(self.config.data_files)
+  File "/var/scratch/tkl206/anaconda3/envs/myenv/lib/python3.10/site-packages/datasets/download/download_manager.py", line 326, in download_and_extract
+    return self.extract(self.download(url_or_urls))
+  File "/var/scratch/tkl206/anaconda3/envs/myenv/lib/python3.10/site-packages/datasets/download/download_manager.py", line 159, in download
+    downloaded_path_or_paths = map_nested(
+  File "/var/scratch/tkl206/anaconda3/envs/myenv/lib/python3.10/site-packages/datasets/utils/py_utils.py", line 521, in map_nested
+    mapped = [
+  File "/var/scratch/tkl206/anaconda3/envs/myenv/lib/python3.10/site-packages/datasets/utils/py_utils.py", line 522, in <listcomp>
+    _single_map_nested((function, obj, batched, batch_size, types, None, True, None))
+  File "/var/scratch/tkl206/anaconda3/envs/myenv/lib/python3.10/site-packages/datasets/utils/py_utils.py", line 409, in _single_map_nested
+    mapped = [_single_map_nested((function, v, batched, batch_size, types, None, True, None)) for v in pbar]
+  File "/var/scratch/tkl206/anaconda3/envs/myenv/lib/python3.10/site-packages/datasets/utils/py_utils.py", line 409, in <listcomp>
+    mapped = [_single_map_nested((function, v, batched, batch_size, types, None, True, None)) for v in pbar]
+  File "/var/scratch/tkl206/anaconda3/envs/myenv/lib/python3.10/site-packages/datasets/utils/py_utils.py", line 390, in _single_map_nested
+    return [mapped_item for batch in iter_batched(data_struct, batch_size) for mapped_item in function(batch)]
+  File "/var/scratch/tkl206/anaconda3/envs/myenv/lib/python3.10/site-packages/datasets/utils/py_utils.py", line 390, in <listcomp>
+    return [mapped_item for batch in iter_batched(data_struct, batch_size) for mapped_item in function(batch)]
+  File "/var/scratch/tkl206/anaconda3/envs/myenv/lib/python3.10/site-packages/datasets/download/download_manager.py", line 219, in _download_batched
+    return [
+  File "/var/scratch/tkl206/anaconda3/envs/myenv/lib/python3.10/site-packages/datasets/download/download_manager.py", line 220, in <listcomp>
+    self._download_single(url_or_filename, download_config=download_config)
+  File "/var/scratch/tkl206/anaconda3/envs/myenv/lib/python3.10/site-packages/datasets/download/download_manager.py", line 229, in _download_single
+    out = cached_path(url_or_filename, download_config=download_config)
+  File "/var/scratch/tkl206/anaconda3/envs/myenv/lib/python3.10/site-packages/datasets/utils/file_utils.py", line 191, in cached_path
+    output_path = huggingface_hub.HfApi(
+  File "/var/scratch/tkl206/anaconda3/envs/myenv/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/var/scratch/tkl206/anaconda3/envs/myenv/lib/python3.10/site-packages/huggingface_hub/hf_api.py", line 5483, in hf_hub_download
+    return hf_hub_download(
+  File "/var/scratch/tkl206/anaconda3/envs/myenv/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/var/scratch/tkl206/anaconda3/envs/myenv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1008, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+  File "/var/scratch/tkl206/anaconda3/envs/myenv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1159, in _hf_hub_download_to_cache_dir
+    _download_to_tmp_and_move(
+  File "/var/scratch/tkl206/anaconda3/envs/myenv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1694, in _download_to_tmp_and_move
+    with incomplete_path.open("ab") as f:
+OSError: [Errno 122] Disk quota exceeded

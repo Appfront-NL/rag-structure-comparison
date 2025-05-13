@@ -1,0 +1,73 @@
+{
+  "dataset_revision": "6bb0321659c4f07c4c2176c30c98c971be6571b4",
+  "task_name": "MalteseNewsClassification",
+  "mteb_version": "1.38.9",
+  "scores": {
+    "test": [
+      {
+        "accuracy": 0.348237,
+        "f1": 0.288262,
+        "lrap": 0.456409,
+        "scores_per_experiment": [
+          {
+            "accuracy": 0.363953,
+            "f1": 0.287089,
+            "lrap": 0.473637
+          },
+          {
+            "accuracy": 0.333478,
+            "f1": 0.295901,
+            "lrap": 0.439655
+          },
+          {
+            "accuracy": 0.354811,
+            "f1": 0.275266,
+            "lrap": 0.455428
+          },
+          {
+            "accuracy": 0.356987,
+            "f1": 0.310287,
+            "lrap": 0.465245
+          },
+          {
+            "accuracy": 0.306922,
+            "f1": 0.289524,
+            "lrap": 0.428331
+          },
+          {
+            "accuracy": 0.344798,
+            "f1": 0.277461,
+            "lrap": 0.453336
+          },
+          {
+            "accuracy": 0.386591,
+            "f1": 0.301182,
+            "lrap": 0.511285
+          },
+          {
+            "accuracy": 0.332172,
+            "f1": 0.2712,
+            "lrap": 0.434598
+          },
+          {
+            "accuracy": 0.367,
+            "f1": 0.28886,
+            "lrap": 0.471089
+          },
+          {
+            "accuracy": 0.335655,
+            "f1": 0.285846,
+            "lrap": 0.431488
+          }
+        ],
+        "main_score": 0.348237,
+        "hf_subset": "default",
+        "languages": [
+          "mlt-Latn"
+        ]
+      }
+    ]
+  },
+  "evaluation_time": 600.9715843200684,
+  "kg_co2_emissions": null
+}
