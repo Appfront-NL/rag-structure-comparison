@@ -1,2 +1,0 @@
-model_name,task_name,subset,main_score,precision,recall,f1,accuracy,hf_subset,languages
-intfloat/multilingual-e5-large-instruct,"BornholmBitextMining(name='BornholmBitextMining', languages=['dan'])",test,0.5600380952380951,0.5296666666666667,0.63,0.5600380952380951,0.63,default,['dan-Latn']

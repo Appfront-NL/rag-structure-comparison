@@ -9,7 +9,6 @@ from collections import defaultdict
 # pd.set_option("display.max_colwidth", 100)  # adjust to show long content
 
 
-
 # Load benchmark and tasks
 benchmark = mteb.get_benchmark("MTEB(Europe, v1)")
 tasks = benchmark.tasks
@@ -17,18 +16,30 @@ tasks = benchmark.tasks
 # Group tasks by their 'type'
 type_to_tasks = defaultdict(list)
 for task in tasks:
-    task_type = task.metadata.type  # this is the correct way to access type
+    task_type = task.metadata.type
     type_to_tasks[task_type].append(task)
 
-# Sample one task per type
-random.seed(43)
-sampled_tasks = [random.choice(task_list) for task_list in type_to_tasks.values()]
+# Display all tasks by type with full metadata
+for task_type, task_list in type_to_tasks.items():
+    print(f"\nTask type: {task_type}")
+    for task in task_list:
+        # Get name safely
+        name = getattr(task, "name", task.__class__.__name__)
+        # Get languages from metadata
+        languages = task.metadata.languages if hasattr(task.metadata, "languages") else []
+        print(f"  {name} (languages: {languages})")
+        print(f"    Metadata: {task.metadata}")
 
-# Sanity check
-print("Sampled tasks by type:")
-for task in sampled_tasks:
-    print(task)
-    print('\n\n')
+
+# # Sample one task per type
+# random.seed(43)
+# sampled_tasks = [random.choice(task_list) for task_list in type_to_tasks.values()]
+
+# # Sanity check
+# print("Sampled tasks by type:")
+# for task in sampled_tasks:
+#     print(task)
+#     print('\n\n')
 
 
 
