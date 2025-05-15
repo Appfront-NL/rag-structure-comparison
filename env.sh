@@ -14,7 +14,8 @@ install() {
 
 run() {
     echo "Running script using Conda environment '$ENV_NAME'..."
-    conda run -n "$ENV_NAME" python MultiModal/Customizing.py
+    # conda run -n "$ENV_NAME" python MultiModal/Customizing.py
+    conda run -n "$ENV_NAME" python MultiModal/ensambleTest.py
 }
 
 clean() {
