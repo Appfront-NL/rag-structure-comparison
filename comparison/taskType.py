@@ -1,35 +1,17 @@
-# Creating a Python script that uses the MTEB library to extract metadata for selected tasks and save to file
-
 import mteb
 
-# Load the benchmark
 benchmark = mteb.get_benchmark("MTEB(Europe, v1)")
 tasks = benchmark.tasks
 
-# Desired task names
-selected_task_names = {
-    "AlloprofRetrieval",
-    "StatcanDialogueDatasetRetrieval",
-    "WikipediaRetrievalMultilingual",
-    "BelebeleRetrieval",
-    "AlloprofReranking",
-    "WikipediaRerankingMultilingual",
-    "WebLINXCandidatesReranking",
-    "DiaBLaBitextMining",
-    "BUCCBitextMiningFast",
-    "STS17Crosslingual",
-    "STSES",
-    "STS12"
-}
+retrieval_tasks = [task for task in tasks if getattr(task.metadata, "type", None) == "MultilabelClassification"]
+# retrieval_tasks = [task for task in tasks if task.__class__.__name__ == "AlloprofRetrieval"]
 
-# Filter for selected tasks
-selected_tasks = [task for task in tasks if task.__class__.__name__ in selected_task_names]
 
 # Output file
-output_path = "selected_tasks_metadata.txt"
+output_path = "alloprof_metadata.txt"
 
 with open(output_path, "w", encoding="utf-8") as f:
-    for task in selected_tasks:
+    for task in retrieval_tasks:
         name = task.__class__.__name__
         dataset = task.metadata.dataset
         task_type = task.metadata.type
