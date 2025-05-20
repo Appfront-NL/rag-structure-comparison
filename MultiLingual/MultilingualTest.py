@@ -27,7 +27,8 @@ selected_tasks = [task for task in tasks if task.__class__.__name__ in selected_
 
 # Load the model
 # MODEL_NAME = "NovaSearch/jasper_en_vision_language_v1"
-MODEL_NAME = "ibm-granite/granite-embedding-107m-multilingual"
+# MODEL_NAME = "ibm-granite/granite-embedding-107m-multilingual"
+MODEL_NAME = "avsolatorio/NoInstruct-small-Embedding-v0"
 
 model = mteb.get_model(MODEL_NAME)
 
