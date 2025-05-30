@@ -36,7 +36,7 @@ for model_name in model_names:
     
     # Create a unique output folder per model
     safe_model_name = model_name.replace("/", "_")
-    output_folder = f"MultiModal/{safe_model_name}"
+    output_folder = f"ResultsMultiModal/{safe_model_name}"
     os.makedirs(output_folder, exist_ok=True)
     
     evaluation = mteb.MTEB(tasks=selected_tasks)
