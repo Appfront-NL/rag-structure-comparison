@@ -1,12 +1,18 @@
 import mteb
 import pandas as pd
 from collections import defaultdict
+import os
 
-# Load the benchmark
+# List of models to evaluate
+model_names = [
+    "Lajavaness/bilingual-embedding-base",
+    "aari1995/German_Semantic_STS_V2",
+    "avsolatorio/GIST-large-Embedding-v0"
+]
+
+# Load the benchmark and filter tasks
 benchmark = mteb.get_benchmark("MTEB(Europe, v1)")
 tasks = benchmark.tasks
-
-# Desired task names
 selected_task_names = {
     "AlloprofRetrieval",
     "StatcanDialogueDatasetRetrieval",
@@ -21,50 +27,49 @@ selected_task_names = {
     "STSES",
     "STS12"
 }
-
-# Filter for selected tasks
 selected_tasks = [task for task in tasks if task.__class__.__name__ in selected_task_names]
 
-# Load the model
-# MODEL_NAME = "NovaSearch/jasper_en_vision_language_v1"
-# MODEL_NAME = "ibm-granite/granite-embedding-107m-multilingual"
-MODEL_NAME = "intfloat/multilingual-e5-large-instruct"
+# Evaluate each model
+for model_name in model_names:
+    print(f"Running evaluation for: {model_name}")
+    model = mteb.get_model(model_name)
+    
+    # Create a unique output folder per model
+    safe_model_name = model_name.replace("/", "_")
+    output_folder = f"results/{safe_model_name}"
+    os.makedirs(output_folder, exist_ok=True)
+    
+    evaluation = mteb.MTEB(tasks=selected_tasks)
+    results = evaluation.run(model, output_folder=output_folder, return_all_scores=True)
 
-model = mteb.get_model(MODEL_NAME)
-
-# Run the evaluation
-evaluation = mteb.MTEB(tasks=selected_tasks)
-results = evaluation.run(model, output_folder="ML-results-test", return_all_scores=True)
-
-# Collect and save results
-data = []
-
-# If only one task, results is a list of TaskResult objects
-if isinstance(results, list):
-    task_result = results[0]  # Only one task result
-    scores = task_result.scores  # This is a dict like {"test": [ {...}, ... ]}
-    test_scores = scores.get("test", [])
-    if test_scores:
-        main_score = test_scores[0].get("main_score", None)
-        data.append({
-            "model_name": MODEL_NAME,
-            "task_name": task_result.task,
-            "subset": "test",
-            "main_score": main_score,
-            **test_scores[0]
-        })
-else:
-    for task_name, subsets in results.items():
-        for subset_name, metrics in subsets.items():
+    # Collect results
+    data = []
+    if isinstance(results, list):
+        task_result = results[0]
+        scores = task_result.scores
+        test_scores = scores.get("test", [])
+        if test_scores:
+            main_score = test_scores[0].get("main_score", None)
             data.append({
-                "model_name": MODEL_NAME,
-                "task_name": task_name,
-                "subset": subset_name,
-                "main_score": metrics.get("main_score", None),
-                **metrics
+                "model_name": model_name,
+                "task_name": task_result.task,
+                "subset": "test",
+                "main_score": main_score,
+                **test_scores[0]
             })
+    else:
+        for task_name, subsets in results.items():
+            for subset_name, metrics in subsets.items():
+                data.append({
+                    "model_name": model_name,
+                    "task_name": task_name,
+                    "subset": subset_name,
+                    "main_score": metrics.get("main_score", None),
+                    **metrics
+                })
 
-# Save results to CSV
-df = pd.DataFrame(data)
-df.to_csv("results/summary.csv", index=False)
-print(df)
+    # Save summary CSV
+    df = pd.DataFrame(data)
+    summary_csv = os.path.join(output_folder, "summary.csv")
+    df.to_csv(summary_csv, index=False)
+    print(f"Results saved to {summary_csv}")
