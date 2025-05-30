@@ -15,8 +15,8 @@ selected_task_names = {
     "AlloprofReranking",
     "WikipediaRerankingMultilingual",
     "WebLINXCandidatesReranking",
-    # "DiaBLaBitextMining",
-    # "BUCCBitextMiningFast",
+    "DiaBLaBitextMining",
+    "BUCCBitextMiningFast",
     "STS17Crosslingual",
     "STSES",
     "STS12"
@@ -26,9 +26,9 @@ selected_task_names = {
 selected_tasks = [task for task in tasks if task.__class__.__name__ in selected_task_names]
 
 # Load the model
-MODEL_NAME = "NovaSearch/jasper_en_vision_language_v1"
+# MODEL_NAME = "NovaSearch/jasper_en_vision_language_v1"
 # MODEL_NAME = "ibm-granite/granite-embedding-107m-multilingual"
-# MODEL_NAME = "avsolatorio/NoInstruct-small-Embedding-v0"
+MODEL_NAME = "intfloat/multilingual-e5-large-instruct"
 
 model = mteb.get_model(MODEL_NAME)
 
