@@ -9,17 +9,17 @@ tasks = benchmark.tasks
 # Desired task names
 selected_task_names = {
     "AlloprofRetrieval",
-    "StatcanDialogueDatasetRetrieval",
-    "WikipediaRetrievalMultilingual",
-    "BelebeleRetrieval",
-    "AlloprofReranking",
-    "WikipediaRerankingMultilingual",
-    "WebLINXCandidatesReranking",
-    "DiaBLaBitextMining",
-    "BUCCBitextMiningFast",
-    "STS17Crosslingual",
-    "STSES",
-    "STS12"
+    # "StatcanDialogueDatasetRetrieval",
+    # "WikipediaRetrievalMultilingual",
+    # "BelebeleRetrieval",
+    # "AlloprofReranking",
+    # "WikipediaRerankingMultilingual",
+    # "WebLINXCandidatesReranking",
+    # "DiaBLaBitextMining",
+    # "BUCCBitextMiningFast",
+    # "STS17Crosslingual",
+    # "STSES",
+    # "STS12"
 }
 
 # Filter for selected tasks
@@ -34,7 +34,7 @@ model = mteb.get_model(MODEL_NAME)
 
 # Run the evaluation
 evaluation = mteb.MTEB(tasks=selected_tasks)
-results = evaluation.run(model, output_folder="results", return_all_scores=True)
+results = evaluation.run(model, output_folder="ML-results-test", return_all_scores=True)
 
 # Collect and save results
 data = []
