@@ -16,7 +16,7 @@ selected_task_names = {
     "WikipediaRerankingMultilingual",
     "WebLINXCandidatesReranking",
     "DiaBLaBitextMining",
-    "BUCCBitextMiningFast",
+    # "BUCCBitextMiningFast",
     "STS17Crosslingual",
     "STSES",
     "STS12"
