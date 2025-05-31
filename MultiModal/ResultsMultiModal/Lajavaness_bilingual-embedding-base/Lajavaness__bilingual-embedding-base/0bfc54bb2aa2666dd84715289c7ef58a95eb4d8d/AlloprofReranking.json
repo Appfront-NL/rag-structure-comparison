@@ -1,0 +1,26 @@
+{
+  "dataset_revision": "65393d0d7a08a10b4e348135e824f385d420b0fd",
+  "task_name": "AlloprofReranking",
+  "mteb_version": "1.38.9",
+  "scores": {
+    "test": [
+      {
+        "map": 0.704598,
+        "mrr": 0.716125,
+        "nAUC_map_max": 0.113446,
+        "nAUC_map_std": 0.210187,
+        "nAUC_map_diff1": 0.538117,
+        "nAUC_mrr_max": 0.119008,
+        "nAUC_mrr_std": 0.205635,
+        "nAUC_mrr_diff1": 0.537357,
+        "main_score": 0.704598,
+        "hf_subset": "default",
+        "languages": [
+          "fra-Latn"
+        ]
+      }
+    ]
+  },
+  "evaluation_time": 92.34882497787476,
+  "kg_co2_emissions": null
+}
