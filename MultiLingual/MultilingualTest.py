@@ -7,12 +7,12 @@ benchmark = mteb.get_benchmark("MTEB(Europe, v1)")
 tasks = benchmark.tasks
 
 # Desired task names
-selected_task_names = {
-    "AlloprofRetrieval",
-    "StatcanDialogueDatasetRetrieval",
-    "WikipediaRetrievalMultilingual",
-    "BelebeleRetrieval",
-    "AlloprofReranking",
+selected_task_names = { # uncommented files done
+    # "AlloprofRetrieval",
+    # "StatcanDialogueDatasetRetrieval",
+    # "WikipediaRetrievalMultilingual",
+    # "BelebeleRetrieval",
+    # "AlloprofReranking",
     "WikipediaRerankingMultilingual",
     "WebLINXCandidatesReranking",
     "DiaBLaBitextMining",

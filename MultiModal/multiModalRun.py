@@ -5,7 +5,7 @@ import os
 
 # List of models to evaluate
 model_names = [
-    "Lajavaness/bilingual-embedding-base",
+    # "Lajavaness/bilingual-embedding-base",
     "aari1995/German_Semantic_STS_V2",
     "avsolatorio/GIST-large-Embedding-v0"
 ]

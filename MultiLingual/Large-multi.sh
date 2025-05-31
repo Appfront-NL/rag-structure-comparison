@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH --job-name=large_multilingual
-#SBATCH --time=00:15:00
+#SBATCH --time=48:15:00
 #SBATCH -N 1
 #SBATCH --ntasks-per-node=1
 #SBATCH -p defq
