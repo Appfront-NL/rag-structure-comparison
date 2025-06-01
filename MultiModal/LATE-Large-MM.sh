@@ -13,6 +13,8 @@
 module load cuda12.3/toolkit
 module load cuDNN/cuda12.3
 
+
+
 # Load Conda from scratch installation
 source /var/scratch/tkl206/anaconda3/etc/profile.d/conda.sh
 conda activate myenv
@@ -21,6 +23,8 @@ conda activate myenv
 export TRANSFORMERS_CACHE=/var/scratch/tkl206/hf_cache
 export HF_DATASETS_CACHE=/var/scratch/tkl206/hf_cache
 mkdir -p /var/scratch/tkl206/hf_cache
+
+export PYTORCH_CUDA_ALLOC_CONF=expandable_segments=True
 
 # Run your script
 cd $HOME/rag-structure-comparison/MultiModal
