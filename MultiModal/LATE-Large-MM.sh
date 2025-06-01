@@ -24,8 +24,6 @@ export TRANSFORMERS_CACHE=/var/scratch/tkl206/hf_cache
 export HF_DATASETS_CACHE=/var/scratch/tkl206/hf_cache
 mkdir -p /var/scratch/tkl206/hf_cache
 
-export PYTORCH_CUDA_ALLOC_CONF=expandable_segments=True
-
 # Run your script
 cd $HOME/rag-structure-comparison/MultiModal
 python multiModalRun.py

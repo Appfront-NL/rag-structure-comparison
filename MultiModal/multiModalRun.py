@@ -41,13 +41,13 @@ for model_name in model_names:
     os.makedirs(output_folder, exist_ok=True)
     
     evaluation = mteb.MTEB(tasks=selected_tasks)
-    results = evaluation.run(model, output_folder=output_folder, return_all_scores=True)
-    # results = evaluation.run(
-    #     model,
-    #     output_folder=output_folder,
-    #     return_all_scores=True,
-    #     encode_kwargs={"batch_size": 32}  # or try even smaller like 4 or 2
-    # )
+    # results = evaluation.run(model, output_folder=output_folder, return_all_scores=True)
+    results = evaluation.run(
+        model,
+        output_folder=output_folder,
+        return_all_scores=True,
+        encode_kwargs={"batch_size": 8}  # or try even smaller like 4 or 2
+    )
     # Collect results
     data = []
     if isinstance(results, list):
