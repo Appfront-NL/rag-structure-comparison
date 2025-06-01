@@ -1,0 +1,98 @@
+/var/scratch/tkl206/anaconda3/envs/myenv/lib/python3.10/site-packages/transformers/utils/hub.py:105: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+Loader not specified for model aari1995/German_Semantic_STS_V2, loading using sentence transformers.
+No sentence-transformers model found with name aari1995/German_Semantic_STS_V2. Creating a new one with mean pooling.
+Running evaluation for: aari1995/German_Semantic_STS_V2
+─────────────────────────────── Selected tasks  ────────────────────────────────
+BitextMining
+    - BUCC.v2, s2s, multilingual 2 / 4 Subsets
+    - DiaBlaBitextMining, s2s, multilingual 2 / 2 Subsets
+
+
+Reranking
+    - WebLINXCandidatesReranking, p2p
+    - AlloprofReranking, s2p
+    - WikipediaRerankingMultilingual, s2p, multilingual 11 / 16 Subsets
+
+
+Retrieval
+    - AlloprofRetrieval, s2p
+    - BelebeleRetrieval, s2p, multilingual 73 / 376 Subsets
+    - StatcanDialogueDatasetRetrieval, s2p, multilingual 2 / 2 Subsets
+    - WikipediaRetrievalMultilingual, s2p, multilingual 11 / 16 Subsets
+
+
+STS
+    - STS17, s2s, multilingual 7 / 11 Subsets
+    - STSES, s2s
+
+
+Error while evaluating WebLINXCandidatesReranking: CUDA out of memory. Tried to allocate 4.00 GiB. GPU 0 has a total capacity of 11.91 GiB of which 3.53 GiB is free. Including non-PyTorch memory, this process has 8.38 GiB memory in use. Of the allocated memory 7.27 GiB is allocated by PyTorch, and 1020.63 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File "/home/tkl206/rag-structure-comparison/MultiModal/multiModalRun.py", line 43, in <module>
+    results = evaluation.run(model, output_folder=output_folder, return_all_scores=True)
+  File "/var/scratch/tkl206/anaconda3/envs/myenv/lib/python3.10/site-packages/mteb/evaluation/MTEB.py", line 672, in run
+    raise e
+  File "/var/scratch/tkl206/anaconda3/envs/myenv/lib/python3.10/site-packages/mteb/evaluation/MTEB.py", line 625, in run
+    results, tick, tock = self._run_eval(
+  File "/var/scratch/tkl206/anaconda3/envs/myenv/lib/python3.10/site-packages/mteb/evaluation/MTEB.py", line 307, in _run_eval
+    results = task.evaluate(
+  File "/var/scratch/tkl206/anaconda3/envs/myenv/lib/python3.10/site-packages/mteb/abstasks/AbsTask.py", line 137, in evaluate
+    scores[hf_subset] = self._evaluate_subset(
+  File "/var/scratch/tkl206/anaconda3/envs/myenv/lib/python3.10/site-packages/mteb/abstasks/AbsTaskReranking.py", line 94, in _evaluate_subset
+    scores = evaluator(model)
+  File "/var/scratch/tkl206/anaconda3/envs/myenv/lib/python3.10/site-packages/mteb/evaluation/evaluators/RerankingEvaluator.py", line 70, in __call__
+    scores = self.compute_metrics(model)
+  File "/var/scratch/tkl206/anaconda3/envs/myenv/lib/python3.10/site-packages/mteb/evaluation/evaluators/RerankingEvaluator.py", line 75, in compute_metrics
+    self.compute_metrics_batched(model)
+  File "/var/scratch/tkl206/anaconda3/envs/myenv/lib/python3.10/site-packages/mteb/evaluation/evaluators/RerankingEvaluator.py", line 87, in compute_metrics_batched
+    model.encode(
+  File "/var/scratch/tkl206/anaconda3/envs/myenv/lib/python3.10/site-packages/mteb/models/sentence_transformer_wrapper.py", line 107, in encode
+    embeddings = self.model.encode(
+  File "/var/scratch/tkl206/anaconda3/envs/myenv/lib/python3.10/site-packages/sentence_transformers/SentenceTransformer.py", line 685, in encode
+    out_features = self.forward(features, **kwargs)
+  File "/var/scratch/tkl206/anaconda3/envs/myenv/lib/python3.10/site-packages/sentence_transformers/SentenceTransformer.py", line 753, in forward
+    return super().forward(input)
+  File "/var/scratch/tkl206/anaconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/container.py", line 240, in forward
+    input = module(input)
+  File "/var/scratch/tkl206/anaconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/var/scratch/tkl206/anaconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/var/scratch/tkl206/anaconda3/envs/myenv/lib/python3.10/site-packages/sentence_transformers/models/Transformer.py", line 442, in forward
+    outputs = self.auto_model(**trans_features, **kwargs, return_dict=True)
+  File "/var/scratch/tkl206/anaconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/var/scratch/tkl206/anaconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/var/scratch/tkl206/anaconda3/envs/myenv/lib/python3.10/site-packages/transformers/models/bert/modeling_bert.py", line 1144, in forward
+    encoder_outputs = self.encoder(
+  File "/var/scratch/tkl206/anaconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/var/scratch/tkl206/anaconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/var/scratch/tkl206/anaconda3/envs/myenv/lib/python3.10/site-packages/transformers/models/bert/modeling_bert.py", line 695, in forward
+    layer_outputs = layer_module(
+  File "/var/scratch/tkl206/anaconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/var/scratch/tkl206/anaconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/var/scratch/tkl206/anaconda3/envs/myenv/lib/python3.10/site-packages/transformers/models/bert/modeling_bert.py", line 627, in forward
+    layer_output = apply_chunking_to_forward(
+  File "/var/scratch/tkl206/anaconda3/envs/myenv/lib/python3.10/site-packages/transformers/pytorch_utils.py", line 253, in apply_chunking_to_forward
+    return forward_fn(*input_tensors)
+  File "/var/scratch/tkl206/anaconda3/envs/myenv/lib/python3.10/site-packages/transformers/models/bert/modeling_bert.py", line 639, in feed_forward_chunk
+    intermediate_output = self.intermediate(attention_output)
+  File "/var/scratch/tkl206/anaconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/var/scratch/tkl206/anaconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/var/scratch/tkl206/anaconda3/envs/myenv/lib/python3.10/site-packages/transformers/models/bert/modeling_bert.py", line 540, in forward
+    hidden_states = self.intermediate_act_fn(hidden_states)
+  File "/var/scratch/tkl206/anaconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/var/scratch/tkl206/anaconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/var/scratch/tkl206/anaconda3/envs/myenv/lib/python3.10/site-packages/transformers/activations.py", line 78, in forward
+    return self.act(input)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 4.00 GiB. GPU 0 has a total capacity of 11.91 GiB of which 3.53 GiB is free. Including non-PyTorch memory, this process has 8.38 GiB memory in use. Of the allocated memory 7.27 GiB is allocated by PyTorch, and 1020.63 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
