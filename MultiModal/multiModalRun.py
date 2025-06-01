@@ -1,18 +1,18 @@
+from sentence_transformers import SentenceTransformer
 import mteb
 import pandas as pd
-from collections import defaultdict
 import os
+import torch
 
-# List of models to evaluate
 model_names = [
     # "Lajavaness/bilingual-embedding-base",
     "aari1995/German_Semantic_STS_V2",
     "avsolatorio/GIST-large-Embedding-v0"
 ]
 
-# Load the benchmark and filter tasks
 benchmark = mteb.get_benchmark("MTEB(Europe, v1)")
 tasks = benchmark.tasks
+
 selected_task_names = {
     "AlloprofRetrieval",
     "StatcanDialogueDatasetRetrieval",
@@ -27,22 +27,32 @@ selected_task_names = {
     "STSES",
     "STS12"
 }
-selected_tasks = [task for task in tasks if task.__class__.__name__ in selected_task_names]
 
-# Evaluate each model
+# Use task metadata.name to select tasks
+selected_tasks = [task for task in tasks if task.metadata.name in selected_task_names]
+
 for model_name in model_names:
     print(f"Running evaluation for: {model_name}")
-    model = mteb.get_model(model_name)
     
-    # Create a unique output folder per model
+    # Custom loader for specific model
+    if model_name == "aari1995/German_Semantic_STS_V2":
+        model = SentenceTransformer(model_name)
+    else:
+        model = mteb.get_model(model_name)
+    
     safe_model_name = model_name.replace("/", "_")
     output_folder = f"ResultsMultiModal/{safe_model_name}"
     os.makedirs(output_folder, exist_ok=True)
-    
-    evaluation = mteb.MTEB(tasks=selected_tasks)
-    results = evaluation.run(model, output_folder=output_folder, return_all_scores=True)
 
-    # Collect results
+    evaluation = mteb.MTEB(tasks=selected_tasks)
+    results = evaluation.run(
+        model,
+        output_folder=output_folder,
+        return_all_scores=True,
+        encode_kwargs={"batch_size": 8}  # reduce memory usage
+    )
+
+    # Process and save results
     data = []
     if isinstance(results, list):
         task_result = results[0]
@@ -68,8 +78,10 @@ for model_name in model_names:
                     **metrics
                 })
 
-    # Save summary CSV
     df = pd.DataFrame(data)
     summary_csv = os.path.join(output_folder, "summary.csv")
     df.to_csv(summary_csv, index=False)
     print(f"Results saved to {summary_csv}")
+
+    # Optional: free memory between runs
+    torch.cuda.empty_cache()
