@@ -13,7 +13,7 @@ selected_task_names = { # uncommented files done
     # "WikipediaRetrievalMultilingual",
     # "BelebeleRetrieval",
     # "AlloprofReranking",
-    "WikipediaRerankingMultilingual",
+    # "WikipediaRerankingMultilingual",
     "WebLINXCandidatesReranking",
     "DiaBLaBitextMining",
     "BUCCBitextMiningFast",
