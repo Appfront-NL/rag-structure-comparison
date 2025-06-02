@@ -14,3 +14,5 @@ module load cuda12.3/toolkit
 module load cuDNN/cuda12.3
 
 which nvidia-smi
+
+nvidia-smi
