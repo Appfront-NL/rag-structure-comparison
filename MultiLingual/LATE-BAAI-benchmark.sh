@@ -24,4 +24,4 @@ mkdir -p /var/scratch/tkl206/hf_cache
 
 # Run your script
 cd $HOME/rag-structure-comparison/MultiLingual  
-python jinaTask.py
+python baaiTask.py
