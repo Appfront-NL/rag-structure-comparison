@@ -21,13 +21,13 @@ tasks = benchmark.tasks
 # Desired task names
 # Desired task names
 selected_task_names = { # uncommented files done
-    "AlloprofRetrieval",
+    # "AlloprofRetrieval",
     # "StatcanDialogueDatasetRetrieval",
     # "WikipediaRetrievalMultilingual",
     # "BelebeleRetrieval",
     # "AlloprofReranking",
     # "WikipediaRerankingMultilingual",
-    # "WebLINXCandidatesReranking",
+    "WebLINXCandidatesReranking",
     # "DiaBLaBitextMining",
     # "BUCCBitextMiningFast",
     # "STS17Crosslingual",
