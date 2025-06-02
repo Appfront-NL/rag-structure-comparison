@@ -1,0 +1,29 @@
+/var/scratch/tkl206/anaconda3/envs/myenv/lib/python3.10/site-packages/transformers/utils/hub.py:105: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+No sentence-transformers model found with name aari1995/German_Semantic_STS_V2. Creating a new one with mean pooling.
+Running evaluation for: aari1995/German_Semantic_STS_V2
+─────────────────────────────── Selected tasks  ────────────────────────────────
+Reranking
+    - WebLINXCandidatesReranking, p2p
+    - AlloprofReranking, s2p
+    - WikipediaRerankingMultilingual, s2p, multilingual 11 / 16 Subsets
+
+
+Retrieval
+    - AlloprofRetrieval, s2p
+    - BelebeleRetrieval, s2p, multilingual 73 / 376 Subsets
+    - StatcanDialogueDatasetRetrieval, s2p, multilingual 2 / 2 Subsets
+    - WikipediaRetrievalMultilingual, s2p, multilingual 11 / 16 Subsets
+
+
+STS
+    - STS12, s2s
+    - STSES, s2s
+
+
+A total of 188199/316508 duplicate texts were found during encoding. Only encoding unique text and duplicating embeddings across.
+A total of 270946/405972 duplicate texts were found during encoding. Only encoding unique text and duplicating embeddings across.
+A total of 924048/1258191 duplicate texts were found during encoding. Only encoding unique text and duplicating embeddings across.
+A total of 605832/1150781 duplicate texts were found during encoding. Only encoding unique text and duplicating embeddings across.
+A total of 1002139/1606858 duplicate texts were found during encoding. Only encoding unique text and duplicating embeddings across.
+slurmstepd-node025: error: *** JOB 28319 ON node025 CANCELLED AT 2025-06-02T07:16:18 ***

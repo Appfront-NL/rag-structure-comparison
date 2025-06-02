@@ -1,0 +1,2 @@
+model_name,task_name,subset,main_score,precision,recall,f1,accuracy,hf_subset,languages
+avsolatorio/GIST-large-Embedding-v0,"BUCCBitextMiningFast(name='BUCC.v2', languages=['cmn', 'deu', 'eng', '...'])",test,0.5943186687168717,0.5738546921068591,0.6493506493506493,0.5943186687168717,0.6493506493506493,fr-en,"['fra-Latn', 'eng-Latn']"
