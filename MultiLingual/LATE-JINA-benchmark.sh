@@ -1,6 +1,6 @@
 #!/bin/bash
-#SBATCH --job-name=large_multilingual
-#SBATCH --time=56:15:00
+#SBATCH --job-name=large_multilingual-JINA
+#SBATCH --time=14:15:00
 #SBATCH -N 1
 #SBATCH --ntasks-per-node=1
 #SBATCH -p defq
@@ -24,4 +24,4 @@ mkdir -p /var/scratch/tkl206/hf_cache
 
 # Run your script
 cd $HOME/rag-structure-comparison/MultiLingual  
-python MultilingualTest.py
+python jinaTask.py
