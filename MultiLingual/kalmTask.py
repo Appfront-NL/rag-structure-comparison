@@ -55,7 +55,7 @@ for task in selected_tasks:
             with torch.no_grad():  # inference-only mode
                 result = evaluation.run(
                     model,
-                    output_folder=f"ML-results-test/{task.__class__.__name__}",
+                    output_folder=f"ML-results-kalm/{task.__class__.__name__}",
                     return_all_scores=True,
                     batch_size=batch_size
                 )
