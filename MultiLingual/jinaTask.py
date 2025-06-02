@@ -1,6 +1,8 @@
 import mteb
 import pandas as pd
 from collections import defaultdict
+from sentence_transformers import SentenceTransformer
+
 
 # Load the benchmark
 benchmark = mteb.get_benchmark("MTEB(Europe, v1)")
@@ -28,9 +30,10 @@ selected_tasks = [task for task in tasks if task.__class__.__name__ in selected_
 # Load the model
 # MODEL_NAME = "NovaSearch/jasper_en_vision_language_v1"
 # MODEL_NAME = "ibm-granite/granite-embedding-107m-multilingual"
-MODEL_NAME = "jinaai/jina-embeddings-v3"
+MODEL_NAME = "BAAI/bge-m3"
 
-model = mteb.get_model(MODEL_NAME)
+# model = mteb.get_model(MODEL_NAME)
+model = SentenceTransformer(MODEL_NAME, trust_remote_code=True)
 
 # Run the evaluation
 evaluation = mteb.MTEB(tasks=selected_tasks)
