@@ -1,13 +1,24 @@
+import os
 import mteb
 import pandas as pd
 from collections import defaultdict
 from sentence_transformers import SentenceTransformer
+import torch
 
+# --- Memory Management Setup ---
+os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "expandable_segments:True"
 
-# Load the benchmark
+# Choose your model
+MODEL_NAME = "BAAI/bge-m3"
+
+# Load model
+model = SentenceTransformer(MODEL_NAME, trust_remote_code=True)
+
+# Load benchmark
 benchmark = mteb.get_benchmark("MTEB(Europe, v1)")
 tasks = benchmark.tasks
 
+# Desired task names
 # Desired task names
 selected_task_names = { # uncommented files done
     "AlloprofRetrieval",
@@ -24,54 +35,53 @@ selected_task_names = { # uncommented files done
     # "STS12"
 }
 
-# Filter for selected tasks
+# Filter tasks
 selected_tasks = [task for task in tasks if task.__class__.__name__ in selected_task_names]
 
-# Load the model
-# MODEL_NAME = "NovaSearch/jasper_en_vision_language_v1"
-# MODEL_NAME = "ibm-granite/granite-embedding-107m-multilingual"
-MODEL_NAME = "BAAI/bge-m3"
-
-# model = mteb.get_model(MODEL_NAME)
-model = SentenceTransformer(MODEL_NAME, trust_remote_code=True)
-
-# Run the evaluation
+# Setup evaluation
 evaluation = mteb.MTEB(tasks=selected_tasks)
-# results = evaluation.run(model, output_folder="ML-results-test", return_all_scores=True)
-results = evaluation.run(
-    model,
-    output_folder="ML-results-test",
-    return_all_scores=True,
-    batch_size=8  # Or even 4 or 2 depending on your GPU
-)
 
-# Collect and save results
+# Store results
 data = []
 
-# If only one task, results is a list of TaskResult objects
-if isinstance(results, list):
-    task_result = results[0]  # Only one task result
-    scores = task_result.scores  # This is a dict like {"test": [ {...}, ... ]}
-    test_scores = scores.get("test", [])
-    if test_scores:
-        main_score = test_scores[0].get("main_score", None)
-        data.append({
-            "model_name": MODEL_NAME,
-            "task_name": task_result.task,
-            "subset": "test",
-            "main_score": main_score,
-            **test_scores[0]
-        })
-else:
-    for task_name, subsets in results.items():
-        for subset_name, metrics in subsets.items():
-            data.append({
-                "model_name": MODEL_NAME,
-                "task_name": task_name,
-                "subset": subset_name,
-                "main_score": metrics.get("main_score", None),
-                **metrics
-            })
+# Run one task at a time to manage memory
+for task in selected_tasks:
+    print(f"\n➡️ Running task: {task.__class__.__name__}")
+
+    # Try a large batch size first, reduce if OOM happens
+    batch_size = 64
+    while batch_size >= 8:
+        try:
+            with torch.no_grad():  # inference-only mode
+                result = evaluation.run(
+                    model,
+                    output_folder=f"ML-results-test/{task.__class__.__name__}",
+                    return_all_scores=True,
+                    batch_size=batch_size
+                )
+
+            # Collect results
+            for task_name, subsets in result.items():
+                for subset_name, metrics in subsets.items():
+                    data.append({
+                        "model_name": MODEL_NAME,
+                        "task_name": task_name,
+                        "subset": subset_name,
+                        "main_score": metrics.get("main_score", None),
+                        **metrics
+                    })
+
+            # Clear CUDA memory between tasks
+            torch.cuda.empty_cache()
+            break  # break the batch-size loop if successful
+
+        except RuntimeError as e:
+            if "CUDA out of memory" in str(e):
+                print(f"❗ CUDA OOM at batch size {batch_size}, reducing...")
+                torch.cuda.empty_cache()
+                batch_size = batch_size // 2
+            else:
+                raise e  # re-raise non-OOM errors
 
 # Save results to CSV
 df = pd.DataFrame(data)
