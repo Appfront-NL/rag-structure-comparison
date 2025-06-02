@@ -7,6 +7,7 @@ import torch
 
 # --- Memory Management Setup ---
 os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "expandable_segments:True"
+os.environ["PYTORCH_ENABLE_SDPA"] = "0"  # Disable SDPA to avoid sliding window attention warning
 
 # Choose your model
 MODEL_NAME = "HIT-TMG/KaLM-embedding-multilingual-mini-v1"
