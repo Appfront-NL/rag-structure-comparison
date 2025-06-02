@@ -37,7 +37,13 @@ model = SentenceTransformer(MODEL_NAME, trust_remote_code=True)
 
 # Run the evaluation
 evaluation = mteb.MTEB(tasks=selected_tasks)
-results = evaluation.run(model, output_folder="ML-results-test", return_all_scores=True)
+# results = evaluation.run(model, output_folder="ML-results-test", return_all_scores=True)
+results = evaluation.run(
+    model,
+    output_folder="ML-results-test",
+    return_all_scores=True,
+    batch_size=16  # Or even 4 or 2 depending on your GPU
+)
 
 # Collect and save results
 data = []
