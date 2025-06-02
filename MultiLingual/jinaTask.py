@@ -42,7 +42,7 @@ results = evaluation.run(
     model,
     output_folder="ML-results-test",
     return_all_scores=True,
-    batch_size=16  # Or even 4 or 2 depending on your GPU
+    batch_size=8  # Or even 4 or 2 depending on your GPU
 )
 
 # Collect and save results
