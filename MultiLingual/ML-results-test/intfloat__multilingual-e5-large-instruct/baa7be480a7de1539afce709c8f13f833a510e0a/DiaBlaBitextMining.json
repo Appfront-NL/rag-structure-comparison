@@ -5,11 +5,11 @@
   "scores": {
     "test": [
       {
-        "precision": 0.864931,
-        "recall": 0.890919,
-        "f1": 0.872105,
-        "accuracy": 0.890919,
-        "main_score": 0.872105,
+        "precision": 0.8557,
+        "recall": 0.883786,
+        "f1": 0.863342,
+        "accuracy": 0.883786,
+        "main_score": 0.863342,
         "hf_subset": "fr-en",
         "languages": [
           "fra-Latn",
@@ -17,11 +17,11 @@
         ]
       },
       {
-        "precision": 0.864931,
-        "recall": 0.890919,
-        "f1": 0.872105,
-        "accuracy": 0.890919,
-        "main_score": 0.872105,
+        "precision": 0.8557,
+        "recall": 0.883786,
+        "f1": 0.863342,
+        "accuracy": 0.883786,
+        "main_score": 0.863342,
         "hf_subset": "en-fr",
         "languages": [
           "eng-Latn",
@@ -30,6 +30,6 @@
       }
     ]
   },
-  "evaluation_time": 259.242947101593,
+  "evaluation_time": 90.61949682235718,
   "kg_co2_emissions": null
 }

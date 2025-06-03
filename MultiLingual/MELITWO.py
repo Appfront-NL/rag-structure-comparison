@@ -25,11 +25,11 @@ selected_task_names = { # uncommented files done
     # "StatcanDialogueDatasetRetrieval",
     # "WikipediaRetrievalMultilingual",
     # "BelebeleRetrieval",
-    # "AlloprofReranking",
-    # "WikipediaRerankingMultilingual",
+    "AlloprofReranking",
+    "WikipediaRerankingMultilingual",
     "WebLINXCandidatesReranking",
     # "DiaBLaBitextMining",
-    # "BUCCBitextMiningFast", removed because too long
+    # "BUCCBitextMiningFast",
     "STS17Crosslingual",
     "STSES",
     "STS12"
