@@ -5,7 +5,7 @@ import torch
 from sentence_transformers import SentenceTransformer
 
 MODEL_NAME = "HIT-TMG/KaLM-embedding-multilingual-mini-v1"
-TASK_NAME = "STS12STS12STS"
+TASK_NAME = "STS12STS"
 
 os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "expandable_segments:True"
 

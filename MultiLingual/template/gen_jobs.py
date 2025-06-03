@@ -14,7 +14,6 @@ tasks = [
     "WebLINXCandidatesReranking",
     "STS17Crosslingual",
     "STSES",
-    "STS12"
     "STS12STS"
 ]
 
