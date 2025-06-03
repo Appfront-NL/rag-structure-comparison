@@ -1,33 +1,0 @@
-/var/scratch/tkl206/anaconda3/envs/myenv/lib/python3.10/site-packages/transformers/utils/hub.py:105: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
-  warnings.warn(
-The `batch_size` argument is deprecated and will be removed in the next release. Please use `encode_kwargs = {'batch_size': ...}` to set the batch size instead.
-
-➡️ Running task: BUCCBitextMiningFast
-─────────────────────────────── Selected tasks  ────────────────────────────────
-BitextMining
-    - BUCC.v2, s2s, multilingual 2 / 4 Subsets
-    - DiaBlaBitextMining, s2s, multilingual 2 / 2 Subsets
-
-
-Reranking
-    - WebLINXCandidatesReranking, p2p
-
-
-STS
-    - STS17, s2s, multilingual 7 / 11 Subsets
-    - STSES, s2s
-
-
-Encoding 2x9086 sentences:   0%|          | 0/2 [00:00<?, ?it/s]Encoding 2x9086 sentences:  50%|█████     | 1/2 [01:01<01:01, 61.86s/it]Encoding 2x9086 sentences: 100%|██████████| 2/2 [01:46<00:00, 51.56s/it]Encoding 2x9086 sentences: 100%|██████████| 2/2 [01:46<00:00, 53.11s/it]
-Matching sentences:   0%|          | 0/1 [00:00<?, ?it/s]Matching sentences: 100%|██████████| 1/1 [00:02<00:00,  2.54s/it]Matching sentences: 100%|██████████| 1/1 [00:02<00:00,  2.54s/it]
-Encoding 2x9580 sentences:   0%|          | 0/2 [00:00<?, ?it/s]Encoding 2x9580 sentences:  50%|█████     | 1/2 [00:58<00:58, 58.55s/it]Encoding 2x9580 sentences: 100%|██████████| 2/2 [01:48<00:00, 53.70s/it]Encoding 2x9580 sentences: 100%|██████████| 2/2 [01:48<00:00, 54.43s/it]
-Matching sentences:   0%|          | 0/1 [00:00<?, ?it/s]Matching sentences: 100%|██████████| 1/1 [00:02<00:00,  2.66s/it]Matching sentences: 100%|██████████| 1/1 [00:02<00:00,  2.66s/it]
-Encoding 2x5748 sentences:   0%|          | 0/2 [00:00<?, ?it/s]Encoding 2x5748 sentences:  50%|█████     | 1/2 [00:21<00:21, 21.12s/it]Encoding 2x5748 sentences: 100%|██████████| 2/2 [00:39<00:00, 19.71s/it]Encoding 2x5748 sentences: 100%|██████████| 2/2 [00:39<00:00, 19.93s/it]
-Matching sentences:   0%|          | 0/1 [00:00<?, ?it/s]Matching sentences: 100%|██████████| 1/1 [00:00<00:00,  1.19it/s]Matching sentences: 100%|██████████| 1/1 [00:00<00:00,  1.19it/s]
-Encoding 2x5748 sentences:   0%|          | 0/2 [00:00<?, ?it/s]Encoding 2x5748 sentences:  50%|█████     | 1/2 [00:21<00:21, 21.15s/it]Encoding 2x5748 sentences: 100%|██████████| 2/2 [00:40<00:00, 20.04s/it]Encoding 2x5748 sentences: 100%|██████████| 2/2 [00:40<00:00, 20.21s/it]
-Matching sentences:   0%|          | 0/1 [00:00<?, ?it/s]Matching sentences: 100%|██████████| 1/1 [00:00<00:00,  1.26it/s]Matching sentences: 100%|██████████| 1/1 [00:00<00:00,  1.26it/s]
-A total of 188199/316508 duplicate texts were found during encoding. Only encoding unique text and duplicating embeddings across.
-A total of 270946/405972 duplicate texts were found during encoding. Only encoding unique text and duplicating embeddings across.
-A total of 924048/1258191 duplicate texts were found during encoding. Only encoding unique text and duplicating embeddings across.
-A total of 605832/1150781 duplicate texts were found during encoding. Only encoding unique text and duplicating embeddings across.
-slurmstepd-node005: error: *** JOB 28508 ON node005 CANCELLED AT 2025-06-03T07:57:20 DUE TO TIME LIMIT ***

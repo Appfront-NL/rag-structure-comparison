@@ -23,5 +23,5 @@ export HF_DATASETS_CACHE=/var/scratch/tkl206/hf_cache
 mkdir -p /var/scratch/tkl206/hf_cache
 
 # Run script
-cd $HOME/rag-structure-comparison/MultiLingual
+cd $HOME/rag-structure-comparison/MultiLingual/template
 python python_tasks/STS17Crosslingual___HIT_TMG_KaLM_embedding_multilingual_mini_v1.py
