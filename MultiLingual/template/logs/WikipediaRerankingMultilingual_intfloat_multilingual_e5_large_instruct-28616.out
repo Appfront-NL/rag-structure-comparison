@@ -1,0 +1,30 @@
+/var/scratch/tkl206/anaconda3/envs/myenv/lib/python3.10/site-packages/transformers/utils/hub.py:105: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+HTTP Error 429 thrown while requesting HEAD https://huggingface.co/intfloat/multilingual-e5-large-instruct/resolve/main/tokenizer_config.json
+Retrying in 1s [Retry 1/5].
+HTTP Error 429 thrown while requesting HEAD https://huggingface.co/intfloat/multilingual-e5-large-instruct/resolve/main/tokenizer_config.json
+Retrying in 2s [Retry 2/5].
+HTTP Error 429 thrown while requesting HEAD https://huggingface.co/intfloat/multilingual-e5-large-instruct/resolve/main/tokenizer_config.json
+Retrying in 4s [Retry 3/5].
+HTTP Error 429 thrown while requesting HEAD https://huggingface.co/intfloat/multilingual-e5-large-instruct/resolve/main/tokenizer_config.json
+Retrying in 8s [Retry 4/5].
+HTTP Error 429 thrown while requesting HEAD https://huggingface.co/intfloat/multilingual-e5-large-instruct/resolve/main/tokenizer_config.json
+Retrying in 8s [Retry 5/5].
+HTTP Error 429 thrown while requesting HEAD https://huggingface.co/intfloat/multilingual-e5-large-instruct/resolve/main/tokenizer_config.json
+The `batch_size` argument is deprecated and will be removed in the next release. Please use `encode_kwargs = {'batch_size': ...}` to set the batch size instead.
+─────────────────────────────── Selected tasks  ────────────────────────────────
+Reranking
+    - WikipediaRerankingMultilingual, s2p, multilingual 11 / 16 Subsets
+
+
+HTTP Error 429 thrown while requesting HEAD https://huggingface.co/datasets/ellamind/wikipedia-2023-11-reranking-multilingual/resolve/6268b37d6f975f2a134791ba2f250a91d0bdfb4f/wikipedia-2023-11-reranking-multilingual.py
+Retrying in 1s [Retry 1/5].
+HTTP Error 429 thrown while requesting HEAD https://huggingface.co/datasets/ellamind/wikipedia-2023-11-reranking-multilingual/resolve/6268b37d6f975f2a134791ba2f250a91d0bdfb4f/wikipedia-2023-11-reranking-multilingual.py
+Retrying in 2s [Retry 2/5].
+HTTP Error 429 thrown while requesting HEAD https://huggingface.co/datasets/ellamind/wikipedia-2023-11-reranking-multilingual/resolve/6268b37d6f975f2a134791ba2f250a91d0bdfb4f/wikipedia-2023-11-reranking-multilingual.py
+Retrying in 4s [Retry 3/5].
+HTTP Error 429 thrown while requesting HEAD https://huggingface.co/datasets/ellamind/wikipedia-2023-11-reranking-multilingual/resolve/6268b37d6f975f2a134791ba2f250a91d0bdfb4f/wikipedia-2023-11-reranking-multilingual.py
+Retrying in 8s [Retry 4/5].
+HTTP Error 429 thrown while requesting HEAD https://huggingface.co/datasets/ellamind/wikipedia-2023-11-reranking-multilingual/resolve/6268b37d6f975f2a134791ba2f250a91d0bdfb4f/wikipedia-2023-11-reranking-multilingual.py
+Retrying in 8s [Retry 5/5].
+slurmstepd-node050: error: *** JOB 28616 ON node050 CANCELLED AT 2025-06-03T17:57:55 ***

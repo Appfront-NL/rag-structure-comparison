@@ -1,0 +1,10 @@
+/var/scratch/tkl206/anaconda3/envs/myenv/lib/python3.10/site-packages/transformers/utils/hub.py:105: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+The `batch_size` argument is deprecated and will be removed in the next release. Please use `encode_kwargs = {'batch_size': ...}` to set the batch size instead.
+─────────────────────────────── Selected tasks  ────────────────────────────────
+Reranking
+    - WikipediaRerankingMultilingual, s2p, multilingual 11 / 16 Subsets
+
+
+A total of 5/13500 duplicate texts were found during encoding. Only encoding unique text and duplicating embeddings across.
+slurmstepd-node029: error: *** JOB 28614 ON node029 CANCELLED AT 2025-06-03T17:57:55 ***

@@ -1,0 +1,9 @@
+/var/scratch/tkl206/anaconda3/envs/myenv/lib/python3.10/site-packages/transformers/utils/hub.py:105: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+The `batch_size` argument is deprecated and will be removed in the next release. Please use `encode_kwargs = {'batch_size': ...}` to set the batch size instead.
+─────────────────────────────── Selected tasks  ────────────────────────────────
+Reranking
+    - WebLINXCandidatesReranking, p2p
+
+
+slurmstepd-node051: error: *** JOB 28611 ON node051 CANCELLED AT 2025-06-03T17:57:55 ***
