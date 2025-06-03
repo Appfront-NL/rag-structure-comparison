@@ -14,7 +14,7 @@ install() {
 
 run() {
     echo "Running script using Conda environment '$ENV_NAME'..."
-    conda run -n "$ENV_NAME" python MultiLingual/jinaTask.py
+    conda run -n "$ENV_NAME" python MultiLingual/baaiTask.py
     # conda run -n "$ENV_NAME" python MultiModal/multiModalRun.py
     # conda run -n "$ENV_NAME" python comparison/euTasksList.py
     # conda run -n "$ENV_NAME" python MultiLingual/MultiLingualTest.py

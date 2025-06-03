@@ -28,8 +28,8 @@ selected_task_names = { # uncommented files done
     # "AlloprofReranking",
     # "WikipediaRerankingMultilingual",
     "WebLINXCandidatesReranking",
-    "DiaBLaBitextMining",
-    "BUCCBitextMiningFast",
+    # "DiaBLaBitextMining",
+    # "BUCCBitextMiningFast", removed because too long
     "STS17Crosslingual",
     "STSES",
     "STS12"
@@ -49,7 +49,7 @@ for task in selected_tasks:
     print(f"\n➡️ Running task: {task.__class__.__name__}")
 
     # Try a large batch size first, reduce if OOM happens
-    batch_size = 64
+    batch_size = 32
     while batch_size >= 8:
         try:
             with torch.no_grad():  # inference-only mode

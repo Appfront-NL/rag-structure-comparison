@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=large_multilingual-JINA
+#SBATCH --job-name=large_multilingual-BAAI
 #SBATCH --time=14:15:00
 #SBATCH -N 1
 #SBATCH --ntasks-per-node=1

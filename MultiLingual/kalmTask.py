@@ -21,15 +21,15 @@ tasks = benchmark.tasks
 
 # Desired task names
 selected_task_names = { # uncommented files done
-    "AlloprofRetrieval",
-    "StatcanDialogueDatasetRetrieval",
-    "WikipediaRetrievalMultilingual",
-    "BelebeleRetrieval",
-    "AlloprofReranking",
-    "WikipediaRerankingMultilingual",
+    # "AlloprofRetrieval",
+    # "StatcanDialogueDatasetRetrieval",
+    # "WikipediaRetrievalMultilingual",
+    # "BelebeleRetrieval",
+    # "AlloprofReranking",
+    # "WikipediaRerankingMultilingual", temp removal
     "WebLINXCandidatesReranking",
     "DiaBLaBitextMining",
-    "BUCCBitextMiningFast",
+    # "BUCCBitextMiningFast", removed because too long
     "STS17Crosslingual",
     "STSES",
     "STS12"
@@ -55,7 +55,7 @@ for task in selected_tasks:
             with torch.no_grad():  # inference-only mode
                 result = evaluation.run(
                     model,
-                    output_folder=f"ML-results-kalm/{task.__class__.__name__}",
+                    output_folder=f"ML-results-kalm/{task.metadata.name}",
                     return_all_scores=True,
                     batch_size=batch_size
                 )
