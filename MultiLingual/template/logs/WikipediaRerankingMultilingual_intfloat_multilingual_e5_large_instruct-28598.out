@@ -1,0 +1,33 @@
+/var/scratch/tkl206/anaconda3/envs/myenv/lib/python3.10/site-packages/transformers/utils/hub.py:105: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+HTTP Error 429 thrown while requesting HEAD https://huggingface.co/intfloat/multilingual-e5-large-instruct/resolve/main/modules.json
+Retrying in 1s [Retry 1/5].
+HTTP Error 429 thrown while requesting HEAD https://huggingface.co/intfloat/multilingual-e5-large-instruct/resolve/main/modules.json
+Retrying in 2s [Retry 2/5].
+HTTP Error 429 thrown while requesting HEAD https://huggingface.co/intfloat/multilingual-e5-large-instruct/resolve/main/modules.json
+Retrying in 4s [Retry 3/5].
+HTTP Error 429 thrown while requesting HEAD https://huggingface.co/intfloat/multilingual-e5-large-instruct/resolve/main/modules.json
+Retrying in 8s [Retry 4/5].
+HTTP Error 429 thrown while requesting HEAD https://huggingface.co/intfloat/multilingual-e5-large-instruct/resolve/main/modules.json
+Retrying in 8s [Retry 5/5].
+HTTP Error 429 thrown while requesting HEAD https://huggingface.co/intfloat/multilingual-e5-large-instruct/resolve/main/modules.json
+HTTP Error 429 thrown while requesting HEAD https://huggingface.co/intfloat/multilingual-e5-large-instruct/resolve/main/config_sentence_transformers.json
+Retrying in 1s [Retry 1/5].
+HTTP Error 429 thrown while requesting HEAD https://huggingface.co/intfloat/multilingual-e5-large-instruct/resolve/main/config_sentence_transformers.json
+Retrying in 2s [Retry 2/5].
+HTTP Error 429 thrown while requesting HEAD https://huggingface.co/intfloat/multilingual-e5-large-instruct/resolve/main/config_sentence_transformers.json
+Retrying in 4s [Retry 3/5].
+HTTP Error 429 thrown while requesting HEAD https://huggingface.co/intfloat/multilingual-e5-large-instruct/resolve/main/config_sentence_transformers.json
+Retrying in 8s [Retry 4/5].
+HTTP Error 429 thrown while requesting HEAD https://huggingface.co/intfloat/multilingual-e5-large-instruct/resolve/main/config_sentence_transformers.json
+Retrying in 8s [Retry 5/5].
+HTTP Error 429 thrown while requesting HEAD https://huggingface.co/intfloat/multilingual-e5-large-instruct/resolve/main/config_sentence_transformers.json
+HTTP Error 429 thrown while requesting HEAD https://huggingface.co/intfloat/multilingual-e5-large-instruct/resolve/main/README.md
+Retrying in 1s [Retry 1/5].
+HTTP Error 429 thrown while requesting HEAD https://huggingface.co/intfloat/multilingual-e5-large-instruct/resolve/main/README.md
+Retrying in 2s [Retry 2/5].
+HTTP Error 429 thrown while requesting HEAD https://huggingface.co/intfloat/multilingual-e5-large-instruct/resolve/main/README.md
+Retrying in 4s [Retry 3/5].
+HTTP Error 429 thrown while requesting HEAD https://huggingface.co/intfloat/multilingual-e5-large-instruct/resolve/main/README.md
+Retrying in 8s [Retry 4/5].
+slurmstepd-node048: error: *** JOB 28598 ON node048 CANCELLED AT 2025-06-03T17:53:42 ***
