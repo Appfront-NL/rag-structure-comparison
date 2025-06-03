@@ -1,0 +1,6 @@
+/var/scratch/tkl206/anaconda3/envs/myenv/lib/python3.10/site-packages/transformers/utils/hub.py:105: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+Traceback (most recent call last):
+  File "/home/tkl206/rag-structure-comparison/MultiLingual/template/python_tasks/STS12STS12STS___BAAI_bge_m3.py", line 14, in <module>
+    task = next(t for t in benchmark.tasks if t.__class__.__name__ == TASK_NAME)
+StopIteration
