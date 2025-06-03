@@ -1,11 +1,11 @@
 #!/bin/bash
-#SBATCH --job-name=STS12_BAAI_bge_m3
-#SBATCH --time=09:15:00
+#SBATCH --job-name=STS12STS12STS_intfloat_multilingual_e5_large_instruct
+#SBATCH --time=12:15:00
 #SBATCH -N 1
 #SBATCH --ntasks-per-node=1
 #SBATCH -p defq
 #SBATCH --gres=gpu:1
-#SBATCH --output=logs/STS12_BAAI_bge_m3-%j.out
+#SBATCH --output=logs/STS12STS12STS_intfloat_multilingual_e5_large_instruct-%j.out
 
 # Load GPU modules
 . /etc/bashrc
@@ -24,4 +24,4 @@ mkdir -p /var/scratch/tkl206/hf_cache
 
 # Run script
 cd $HOME/rag-structure-comparison/MultiLingual/template
-python python_tasks/STS12___BAAI_bge_m3.py
+python python_tasks/STS12STS12STS___intfloat_multilingual_e5_large_instruct.py

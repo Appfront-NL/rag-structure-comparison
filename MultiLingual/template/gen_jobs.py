@@ -15,6 +15,7 @@ tasks = [
     "STS17Crosslingual",
     "STSES",
     "STS12"
+    "STS12STS"
 ]
 
 # Ensure folders exist

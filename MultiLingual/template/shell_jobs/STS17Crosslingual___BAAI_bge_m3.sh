@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH --job-name=STS17Crosslingual_BAAI_bge_m3
-#SBATCH --time=09:15:00
+#SBATCH --time=12:15:00
 #SBATCH -N 1
 #SBATCH --ntasks-per-node=1
 #SBATCH -p defq

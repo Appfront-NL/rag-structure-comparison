@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH --job-name=WikipediaRerankingMultilingual_intfloat_multilingual_e5_large_instruct
-#SBATCH --time=09:15:00
+#SBATCH --time=12:15:00
 #SBATCH -N 1
 #SBATCH --ntasks-per-node=1
 #SBATCH -p defq
