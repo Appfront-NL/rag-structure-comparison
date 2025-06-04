@@ -1,0 +1,14 @@
+/var/scratch/tkl206/anaconda3/envs/myenv/lib/python3.10/site-packages/transformers/utils/hub.py:105: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+The `batch_size` argument is deprecated and will be removed in the next release. Please use `encode_kwargs = {'batch_size': ...}` to set the batch size instead.
+─────────────────────────────── Selected tasks  ────────────────────────────────
+Reranking
+    - WebLINXCandidatesReranking, p2p
+
+
+A total of 188199/316508 duplicate texts were found during encoding. Only encoding unique text and duplicating embeddings across.
+A total of 270946/405972 duplicate texts were found during encoding. Only encoding unique text and duplicating embeddings across.
+A total of 924048/1258191 duplicate texts were found during encoding. Only encoding unique text and duplicating embeddings across.
+A total of 605832/1150781 duplicate texts were found during encoding. Only encoding unique text and duplicating embeddings across.
+A total of 1002139/1606858 duplicate texts were found during encoding. Only encoding unique text and duplicating embeddings across.
+slurmstepd-node048: error: *** JOB 28631 ON node048 CANCELLED AT 2025-06-04T08:01:12 DUE TO TIME LIMIT ***

@@ -1,0 +1,23 @@
+/var/scratch/tkl206/anaconda3/envs/myenv/lib/python3.10/site-packages/transformers/utils/hub.py:105: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+The `batch_size` argument is deprecated and will be removed in the next release. Please use `encode_kwargs = {'batch_size': ...}` to set the batch size instead.
+─────────────────────────────── Selected tasks  ────────────────────────────────
+Reranking
+    - WebLINXCandidatesReranking, p2p
+
+
+A total of 188199/316508 duplicate texts were found during encoding. Only encoding unique text and duplicating embeddings across.
+A total of 270946/405972 duplicate texts were found during encoding. Only encoding unique text and duplicating embeddings across.
+A total of 924048/1258191 duplicate texts were found during encoding. Only encoding unique text and duplicating embeddings across.
+Error while evaluating WebLINXCandidatesReranking: CUDA out of memory. Tried to allocate 1.06 GiB. GPU 0 has a total capacity of 11.91 GiB of which 376.62 MiB is free. Including non-PyTorch memory, this process has 11.54 GiB memory in use. Of the allocated memory 11.34 GiB is allocated by PyTorch, and 92.58 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+The `batch_size` argument is deprecated and will be removed in the next release. Please use `encode_kwargs = {'batch_size': ...}` to set the batch size instead.
+─────────────────────────────── Selected tasks  ────────────────────────────────
+Reranking
+    - WebLINXCandidatesReranking, p2p
+
+
+A total of 188199/316508 duplicate texts were found during encoding. Only encoding unique text and duplicating embeddings across.
+A total of 270946/405972 duplicate texts were found during encoding. Only encoding unique text and duplicating embeddings across.
+A total of 924048/1258191 duplicate texts were found during encoding. Only encoding unique text and duplicating embeddings across.
+A total of 605832/1150781 duplicate texts were found during encoding. Only encoding unique text and duplicating embeddings across.
+slurmstepd-node050: error: *** JOB 28629 ON node050 CANCELLED AT 2025-06-04T08:01:12 DUE TO TIME LIMIT ***

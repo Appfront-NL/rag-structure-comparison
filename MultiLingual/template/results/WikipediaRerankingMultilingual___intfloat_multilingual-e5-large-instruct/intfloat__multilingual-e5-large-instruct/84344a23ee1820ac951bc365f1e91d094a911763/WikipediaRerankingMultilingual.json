@@ -1,0 +1,176 @@
+{
+  "dataset_revision": "6268b37d6f975f2a134791ba2f250a91d0bdfb4f",
+  "task_name": "WikipediaRerankingMultilingual",
+  "mteb_version": "1.38.9",
+  "scores": {
+    "test": [
+      {
+        "map": 0.897787,
+        "mrr": 0.897787,
+        "nAUC_map_max": 0.531865,
+        "nAUC_map_std": 0.466618,
+        "nAUC_map_diff1": 0.784348,
+        "nAUC_mrr_max": 0.531865,
+        "nAUC_mrr_std": 0.466618,
+        "nAUC_mrr_diff1": 0.784348,
+        "main_score": 0.897787,
+        "hf_subset": "bg",
+        "languages": [
+          "bul-Cyrl"
+        ]
+      },
+      {
+        "map": 0.910494,
+        "mrr": 0.910494,
+        "nAUC_map_max": 0.475233,
+        "nAUC_map_std": 0.477893,
+        "nAUC_map_diff1": 0.819548,
+        "nAUC_mrr_max": 0.475233,
+        "nAUC_mrr_std": 0.477893,
+        "nAUC_mrr_diff1": 0.819548,
+        "main_score": 0.910494,
+        "hf_subset": "cs",
+        "languages": [
+          "ces-Latn"
+        ]
+      },
+      {
+        "map": 0.908572,
+        "mrr": 0.909016,
+        "nAUC_map_max": 0.467448,
+        "nAUC_map_std": 0.347571,
+        "nAUC_map_diff1": 0.796979,
+        "nAUC_mrr_max": 0.468966,
+        "nAUC_mrr_std": 0.344749,
+        "nAUC_mrr_diff1": 0.795552,
+        "main_score": 0.908572,
+        "hf_subset": "da",
+        "languages": [
+          "dan-Latn"
+        ]
+      },
+      {
+        "map": 0.886117,
+        "mrr": 0.886117,
+        "nAUC_map_max": 0.494613,
+        "nAUC_map_std": 0.352804,
+        "nAUC_map_diff1": 0.767549,
+        "nAUC_mrr_max": 0.494613,
+        "nAUC_mrr_std": 0.352804,
+        "nAUC_mrr_diff1": 0.767549,
+        "main_score": 0.886117,
+        "hf_subset": "de",
+        "languages": [
+          "deu-Latn"
+        ]
+      },
+      {
+        "map": 0.889223,
+        "mrr": 0.889223,
+        "nAUC_map_max": 0.533569,
+        "nAUC_map_std": 0.456985,
+        "nAUC_map_diff1": 0.830184,
+        "nAUC_mrr_max": 0.533569,
+        "nAUC_mrr_std": 0.456985,
+        "nAUC_mrr_diff1": 0.830184,
+        "main_score": 0.889223,
+        "hf_subset": "en",
+        "languages": [
+          "eng-Latn"
+        ]
+      },
+      {
+        "map": 0.909946,
+        "mrr": 0.909946,
+        "nAUC_map_max": 0.418582,
+        "nAUC_map_std": 0.367189,
+        "nAUC_map_diff1": 0.77581,
+        "nAUC_mrr_max": 0.418582,
+        "nAUC_mrr_std": 0.367189,
+        "nAUC_mrr_diff1": 0.77581,
+        "main_score": 0.909946,
+        "hf_subset": "fi",
+        "languages": [
+          "fin-Latn"
+        ]
+      },
+      {
+        "map": 0.900867,
+        "mrr": 0.900867,
+        "nAUC_map_max": 0.539245,
+        "nAUC_map_std": 0.43729,
+        "nAUC_map_diff1": 0.783646,
+        "nAUC_mrr_max": 0.539245,
+        "nAUC_mrr_std": 0.43729,
+        "nAUC_mrr_diff1": 0.783646,
+        "main_score": 0.900867,
+        "hf_subset": "it",
+        "languages": [
+          "ita-Latn"
+        ]
+      },
+      {
+        "map": 0.890274,
+        "mrr": 0.890607,
+        "nAUC_map_max": 0.3648,
+        "nAUC_map_std": 0.342621,
+        "nAUC_map_diff1": 0.775863,
+        "nAUC_mrr_max": 0.363505,
+        "nAUC_mrr_std": 0.347254,
+        "nAUC_mrr_diff1": 0.774822,
+        "main_score": 0.890274,
+        "hf_subset": "nl",
+        "languages": [
+          "nld-Latn"
+        ]
+      },
+      {
+        "map": 0.901268,
+        "mrr": 0.901268,
+        "nAUC_map_max": 0.438142,
+        "nAUC_map_std": 0.351152,
+        "nAUC_map_diff1": 0.758042,
+        "nAUC_mrr_max": 0.438142,
+        "nAUC_mrr_std": 0.351152,
+        "nAUC_mrr_diff1": 0.758042,
+        "main_score": 0.901268,
+        "hf_subset": "pt",
+        "languages": [
+          "por-Latn"
+        ]
+      },
+      {
+        "map": 0.902828,
+        "mrr": 0.903161,
+        "nAUC_map_max": 0.44696,
+        "nAUC_map_std": 0.385981,
+        "nAUC_map_diff1": 0.836959,
+        "nAUC_mrr_max": 0.447914,
+        "nAUC_mrr_std": 0.389207,
+        "nAUC_mrr_diff1": 0.835982,
+        "main_score": 0.902828,
+        "hf_subset": "ro",
+        "languages": [
+          "ron-Latn"
+        ]
+      },
+      {
+        "map": 0.915731,
+        "mrr": 0.915731,
+        "nAUC_map_max": 0.463008,
+        "nAUC_map_std": 0.376598,
+        "nAUC_map_diff1": 0.797852,
+        "nAUC_mrr_max": 0.463008,
+        "nAUC_mrr_std": 0.376598,
+        "nAUC_mrr_diff1": 0.797852,
+        "main_score": 0.915731,
+        "hf_subset": "sv",
+        "languages": [
+          "swe-Latn"
+        ]
+      }
+    ]
+  },
+  "evaluation_time": 2276.722689628601,
+  "kg_co2_emissions": null
+}
