@@ -2,9 +2,10 @@ import os
 
 # List of models
 models = [
-    "intfloat/multilingual-e5-large-instruct",
-    "HIT-TMG/KaLM-embedding-multilingual-mini-v1",
-    "BAAI/bge-m3"
+    # "intfloat/multilingual-e5-large-instruct",
+    # "HIT-TMG/KaLM-embedding-multilingual-mini-v1",
+    # "BAAI/bge-m3"
+    "aari1995/German_Semantic_V3b"
 ]
 
 # List of tasks

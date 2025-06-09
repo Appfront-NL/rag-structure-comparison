@@ -27,12 +27,12 @@ selected_task_names = { # uncommented files done
     # "BelebeleRetrieval",
     "AlloprofReranking",
     "WikipediaRerankingMultilingual",
-    "WebLINXCandidatesReranking",
+    "WebLINXCandidatesReranking", #NOt done
     # "DiaBLaBitextMining",
     # "BUCCBitextMiningFast",
     "STS17Crosslingual",
     "STSES",
-    "STS12"
+    "STS12" #NOt done
 }
 
 # Filter tasks
