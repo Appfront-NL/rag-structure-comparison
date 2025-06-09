@@ -1,0 +1,47 @@
+/var/scratch/tkl206/anaconda3/envs/myenv/lib/python3.10/site-packages/transformers/utils/hub.py:105: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+Some weights of BertModel were not initialized from the model checkpoint at aari1995/German_Semantic_V3b and are newly initialized: ['embeddings.position_embeddings.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+The `batch_size` argument is deprecated and will be removed in the next release. Please use `encode_kwargs = {'batch_size': ...}` to set the batch size instead.
+─────────────────────────────── Selected tasks  ────────────────────────────────
+Reranking
+    - WikipediaRerankingMultilingual, s2p, multilingual 11 / 16 Subsets
+
+
+BertSdpaSelfAttention is used but `torch.nn.functional.scaled_dot_product_attention` does not support non-absolute `position_embedding_type` or `output_attentions=True` or `head_mask`. Falling back to the manual attention implementation, but specifying the manual implementation will be required from Transformers version v5.0.0 onwards. This warning can be removed using the argument `attn_implementation="eager"` when loading the model.
+A total of 5/13500 duplicate texts were found during encoding. Only encoding unique text and duplicating embeddings across.
+A total of 20/13500 duplicate texts were found during encoding. Only encoding unique text and duplicating embeddings across.
+A total of 29/13500 duplicate texts were found during encoding. Only encoding unique text and duplicating embeddings across.
+A total of 0/13500 duplicate texts were found during encoding. Only encoding unique text and duplicating embeddings across.
+A total of 0/13500 duplicate texts were found during encoding. Only encoding unique text and duplicating embeddings across.
+A total of 32/13500 duplicate texts were found during encoding. Only encoding unique text and duplicating embeddings across.
+A total of 7/13500 duplicate texts were found during encoding. Only encoding unique text and duplicating embeddings across.
+Error while evaluating WikipediaRerankingMultilingual: CUDA out of memory. Tried to allocate 21.30 GiB. GPU 0 has a total capacity of 11.90 GiB of which 7.98 GiB is free. Including non-PyTorch memory, this process has 3.91 GiB memory in use. Of the allocated memory 3.74 GiB is allocated by PyTorch, and 17.66 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+The `batch_size` argument is deprecated and will be removed in the next release. Please use `encode_kwargs = {'batch_size': ...}` to set the batch size instead.
+─────────────────────────────── Selected tasks  ────────────────────────────────
+Reranking
+    - WikipediaRerankingMultilingual, s2p, multilingual 11 / 16 Subsets
+
+
+A total of 5/13500 duplicate texts were found during encoding. Only encoding unique text and duplicating embeddings across.
+A total of 20/13500 duplicate texts were found during encoding. Only encoding unique text and duplicating embeddings across.
+A total of 29/13500 duplicate texts were found during encoding. Only encoding unique text and duplicating embeddings across.
+A total of 0/13500 duplicate texts were found during encoding. Only encoding unique text and duplicating embeddings across.
+A total of 0/13500 duplicate texts were found during encoding. Only encoding unique text and duplicating embeddings across.
+A total of 32/13500 duplicate texts were found during encoding. Only encoding unique text and duplicating embeddings across.
+A total of 7/13500 duplicate texts were found during encoding. Only encoding unique text and duplicating embeddings across.
+Error while evaluating WikipediaRerankingMultilingual: CUDA out of memory. Tried to allocate 10.65 GiB. GPU 0 has a total capacity of 11.90 GiB of which 9.21 GiB is free. Including non-PyTorch memory, this process has 2.68 GiB memory in use. Of the allocated memory 2.51 GiB is allocated by PyTorch, and 10.34 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+The `batch_size` argument is deprecated and will be removed in the next release. Please use `encode_kwargs = {'batch_size': ...}` to set the batch size instead.
+─────────────────────────────── Selected tasks  ────────────────────────────────
+Reranking
+    - WikipediaRerankingMultilingual, s2p, multilingual 11 / 16 Subsets
+
+
+A total of 5/13500 duplicate texts were found during encoding. Only encoding unique text and duplicating embeddings across.
+A total of 20/13500 duplicate texts were found during encoding. Only encoding unique text and duplicating embeddings across.
+A total of 29/13500 duplicate texts were found during encoding. Only encoding unique text and duplicating embeddings across.
+A total of 0/13500 duplicate texts were found during encoding. Only encoding unique text and duplicating embeddings across.
+A total of 0/13500 duplicate texts were found during encoding. Only encoding unique text and duplicating embeddings across.
+A total of 32/13500 duplicate texts were found during encoding. Only encoding unique text and duplicating embeddings across.
+A total of 7/13500 duplicate texts were found during encoding. Only encoding unique text and duplicating embeddings across.
+Error while evaluating WikipediaRerankingMultilingual: CUDA out of memory. Tried to allocate 5.33 GiB. GPU 0 has a total capacity of 11.90 GiB of which 4.70 GiB is free. Including non-PyTorch memory, this process has 7.19 GiB memory in use. Of the allocated memory 7.02 GiB is allocated by PyTorch, and 12.96 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

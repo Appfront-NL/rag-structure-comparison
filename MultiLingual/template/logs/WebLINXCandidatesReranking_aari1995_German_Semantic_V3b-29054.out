@@ -1,0 +1,26 @@
+/var/scratch/tkl206/anaconda3/envs/myenv/lib/python3.10/site-packages/transformers/utils/hub.py:105: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+Some weights of BertModel were not initialized from the model checkpoint at aari1995/German_Semantic_V3b and are newly initialized: ['embeddings.position_embeddings.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+The `batch_size` argument is deprecated and will be removed in the next release. Please use `encode_kwargs = {'batch_size': ...}` to set the batch size instead.
+─────────────────────────────── Selected tasks  ────────────────────────────────
+Reranking
+    - WebLINXCandidatesReranking, p2p
+
+
+BertSdpaSelfAttention is used but `torch.nn.functional.scaled_dot_product_attention` does not support non-absolute `position_embedding_type` or `output_attentions=True` or `head_mask`. Falling back to the manual attention implementation, but specifying the manual implementation will be required from Transformers version v5.0.0 onwards. This warning can be removed using the argument `attn_implementation="eager"` when loading the model.
+Error while evaluating WebLINXCandidatesReranking: CUDA out of memory. Tried to allocate 32.13 GiB. GPU 0 has a total capacity of 11.90 GiB of which 7.40 GiB is free. Including non-PyTorch memory, this process has 4.50 GiB memory in use. Of the allocated memory 4.30 GiB is allocated by PyTorch, and 43.51 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+The `batch_size` argument is deprecated and will be removed in the next release. Please use `encode_kwargs = {'batch_size': ...}` to set the batch size instead.
+─────────────────────────────── Selected tasks  ────────────────────────────────
+Reranking
+    - WebLINXCandidatesReranking, p2p
+
+
+Error while evaluating WebLINXCandidatesReranking: CUDA out of memory. Tried to allocate 16.06 GiB. GPU 0 has a total capacity of 11.90 GiB of which 8.92 GiB is free. Including non-PyTorch memory, this process has 2.97 GiB memory in use. Of the allocated memory 2.79 GiB is allocated by PyTorch, and 24.27 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+The `batch_size` argument is deprecated and will be removed in the next release. Please use `encode_kwargs = {'batch_size': ...}` to set the batch size instead.
+─────────────────────────────── Selected tasks  ────────────────────────────────
+Reranking
+    - WebLINXCandidatesReranking, p2p
+
+
+Error while evaluating WebLINXCandidatesReranking: CUDA out of memory. Tried to allocate 8.03 GiB. GPU 0 has a total capacity of 11.90 GiB of which 1.89 GiB is free. Including non-PyTorch memory, this process has 10.01 GiB memory in use. Of the allocated memory 9.82 GiB is allocated by PyTorch, and 27.11 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

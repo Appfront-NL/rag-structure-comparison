@@ -1,0 +1,121 @@
+{
+  "dataset_revision": "faeb762787bd10488a50c8b5be4a3b82e411949c",
+  "task_name": "STS17",
+  "mteb_version": "1.38.9",
+  "scores": {
+    "test": [
+      {
+        "pearson": 0.630889,
+        "spearman": 0.623879,
+        "cosine_pearson": 0.630889,
+        "cosine_spearman": 0.623879,
+        "manhattan_pearson": 0.633466,
+        "manhattan_spearman": 0.626406,
+        "euclidean_pearson": 0.636104,
+        "euclidean_spearman": 0.626861,
+        "main_score": 0.623879,
+        "hf_subset": "en-de",
+        "languages": [
+          "eng-Latn",
+          "deu-Latn"
+        ]
+      },
+      {
+        "pearson": 0.774199,
+        "spearman": 0.775227,
+        "cosine_pearson": 0.774199,
+        "cosine_spearman": 0.775227,
+        "manhattan_pearson": 0.779397,
+        "manhattan_spearman": 0.77516,
+        "euclidean_pearson": 0.779782,
+        "euclidean_spearman": 0.774598,
+        "main_score": 0.775227,
+        "hf_subset": "en-en",
+        "languages": [
+          "eng-Latn"
+        ]
+      },
+      {
+        "pearson": 0.173528,
+        "spearman": 0.151559,
+        "cosine_pearson": 0.173528,
+        "cosine_spearman": 0.151559,
+        "manhattan_pearson": 0.185216,
+        "manhattan_spearman": 0.146906,
+        "euclidean_pearson": 0.188741,
+        "euclidean_spearman": 0.15469,
+        "main_score": 0.151559,
+        "hf_subset": "es-en",
+        "languages": [
+          "spa-Latn",
+          "eng-Latn"
+        ]
+      },
+      {
+        "pearson": 0.665708,
+        "spearman": 0.680013,
+        "cosine_pearson": 0.665708,
+        "cosine_spearman": 0.680015,
+        "manhattan_pearson": 0.708039,
+        "manhattan_spearman": 0.680879,
+        "euclidean_pearson": 0.705862,
+        "euclidean_spearman": 0.67966,
+        "main_score": 0.680015,
+        "hf_subset": "es-es",
+        "languages": [
+          "spa-Latn"
+        ]
+      },
+      {
+        "pearson": 0.245796,
+        "spearman": 0.243318,
+        "cosine_pearson": 0.245796,
+        "cosine_spearman": 0.243318,
+        "manhattan_pearson": 0.265734,
+        "manhattan_spearman": 0.260007,
+        "euclidean_pearson": 0.262345,
+        "euclidean_spearman": 0.253185,
+        "main_score": 0.243318,
+        "hf_subset": "fr-en",
+        "languages": [
+          "fra-Latn",
+          "eng-Latn"
+        ]
+      },
+      {
+        "pearson": 0.24462,
+        "spearman": 0.211943,
+        "cosine_pearson": 0.24462,
+        "cosine_spearman": 0.211943,
+        "manhattan_pearson": 0.258959,
+        "manhattan_spearman": 0.220112,
+        "euclidean_pearson": 0.263858,
+        "euclidean_spearman": 0.221841,
+        "main_score": 0.211943,
+        "hf_subset": "it-en",
+        "languages": [
+          "ita-Latn",
+          "eng-Latn"
+        ]
+      },
+      {
+        "pearson": 0.330747,
+        "spearman": 0.310938,
+        "cosine_pearson": 0.330747,
+        "cosine_spearman": 0.310938,
+        "manhattan_pearson": 0.35401,
+        "manhattan_spearman": 0.323956,
+        "euclidean_pearson": 0.353456,
+        "euclidean_spearman": 0.323145,
+        "main_score": 0.310938,
+        "hf_subset": "nl-en",
+        "languages": [
+          "nld-Latn",
+          "eng-Latn"
+        ]
+      }
+    ]
+  },
+  "evaluation_time": 15.00089693069458,
+  "kg_co2_emissions": null
+}

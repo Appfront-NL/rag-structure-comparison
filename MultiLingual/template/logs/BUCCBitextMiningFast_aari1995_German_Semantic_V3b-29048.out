@@ -1,0 +1,19 @@
+/var/scratch/tkl206/anaconda3/envs/myenv/lib/python3.10/site-packages/transformers/utils/hub.py:105: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+Some weights of BertModel were not initialized from the model checkpoint at aari1995/German_Semantic_V3b and are newly initialized: ['embeddings.position_embeddings.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+The `batch_size` argument is deprecated and will be removed in the next release. Please use `encode_kwargs = {'batch_size': ...}` to set the batch size instead.
+─────────────────────────────── Selected tasks  ────────────────────────────────
+BitextMining
+    - BUCC.v2, s2s, multilingual 2 / 4 Subsets
+
+
+Encoding 2x9580 sentences:   0%|          | 0/2 [00:00<?, ?it/s]BertSdpaSelfAttention is used but `torch.nn.functional.scaled_dot_product_attention` does not support non-absolute `position_embedding_type` or `output_attentions=True` or `head_mask`. Falling back to the manual attention implementation, but specifying the manual implementation will be required from Transformers version v5.0.0 onwards. This warning can be removed using the argument `attn_implementation="eager"` when loading the model.
+Encoding 2x9580 sentences:  50%|█████     | 1/2 [00:49<00:49, 49.78s/it]Encoding 2x9580 sentences: 100%|██████████| 2/2 [01:53<00:00, 57.81s/it]Encoding 2x9580 sentences: 100%|██████████| 2/2 [01:53<00:00, 56.61s/it]
+Matching sentences:   0%|          | 0/1 [00:00<?, ?it/s]Matching sentences: 100%|██████████| 1/1 [00:02<00:00,  2.51s/it]Matching sentences: 100%|██████████| 1/1 [00:02<00:00,  2.51s/it]
+Encoding 2x9086 sentences:   0%|          | 0/2 [00:00<?, ?it/s]Encoding 2x9086 sentences:  50%|█████     | 1/2 [01:14<01:14, 74.57s/it]Encoding 2x9086 sentences: 100%|██████████| 2/2 [02:12<00:00, 64.50s/it]Encoding 2x9086 sentences: 100%|██████████| 2/2 [02:12<00:00, 66.01s/it]
+Matching sentences:   0%|          | 0/1 [00:00<?, ?it/s]Matching sentences: 100%|██████████| 1/1 [00:02<00:00,  2.40s/it]Matching sentences: 100%|██████████| 1/1 [00:02<00:00,  2.40s/it]
+Traceback (most recent call last):
+  File "/home/tkl206/rag-structure-comparison/MultiLingual/template/python_tasks/BUCCBitextMiningFast___aari1995_German_Semantic_V3b.py", line 29, in <module>
+    for task_name, subsets in result.items():
+AttributeError: 'list' object has no attribute 'items'
