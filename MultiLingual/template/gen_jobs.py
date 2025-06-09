@@ -10,12 +10,16 @@ models = [
 
 # List of tasks
 tasks = [
+    "AlloprofRetrieval",
+    "StatcanDialogueDatasetRetrieval",
+    "WikipediaRetrievalMultilingual",
+    "BelebeleRetrieval",
     "AlloprofReranking",
     "WikipediaRerankingMultilingual",
-    "WebLINXCandidatesReranking",
+    "DiaBLaBitextMining",
+    "BUCCBitextMiningFast",
     "STS17Crosslingual",
     "STSES",
-    "STS12STS"
 ]
 
 # Ensure folders exist
