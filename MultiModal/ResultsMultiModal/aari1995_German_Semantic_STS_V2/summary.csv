@@ -1,2 +1,0 @@
-model_name,task_name,subset,main_score,precision,recall,f1,accuracy,hf_subset,languages
-aari1995/German_Semantic_STS_V2,"BUCCBitextMiningFast(name='BUCC.v2', languages=['cmn', 'deu', 'eng', '...'])",test,0.931531,0.924212,0.947182,0.931531,0.947182,de-en,"['deu-Latn', 'eng-Latn']"
