@@ -1,0 +1,24 @@
+Task,E5,Ensemble,Difference,Benchmark
+StatcanDialogueDatasetRetrieval | french,0.26929,0.12963,0.13965999999999998,StatcanDialogueDatasetRetrieval
+WikipediaRetrievalMultilingual | de,0.92544,0.81037,0.11507,WikipediaRetrievalMultilingual
+AlloprofRetrieval | default,0.52065,0.41261,0.10803999999999997,AlloprofRetrieval
+STS17 | en-de,0.850932,0.783898,0.06703400000000004,STS17
+BUCC.v2 | de-en,0.995825,0.931531,0.06429399999999996,BUCC.v2
+DiaBlaBitextMining | en-fr,0.863342,0.820287,0.043055000000000065,DiaBlaBitextMining
+DiaBlaBitextMining | fr-en,0.863342,0.820287,0.043055000000000065,DiaBlaBitextMining
+StatcanDialogueDatasetRetrieval | english,0.43348,0.39135,0.04213,StatcanDialogueDatasetRetrieval
+AlloprofReranking | default,0.734721,0.704598,0.03012300000000001,AlloprofReranking
+STS17 | nl-en,0.846465,0.820113,0.026352000000000042,STS17
+STS17 | es-en,0.847173,0.823394,0.023778999999999995,STS17
+WikipediaRerankingMultilingual | de,0.886117,0.863503,0.022614000000000023,WikipediaRerankingMultilingual
+BelebeleRetrieval | eng_Latn-deu_Latn,0.93021,0.91109,0.019120000000000026,BelebeleRetrieval
+WikipediaRetrievalMultilingual | en,0.94141,0.92434,0.01706999999999992,WikipediaRetrievalMultilingual
+BelebeleRetrieval | eng_Latn-fra_Latn,0.93471,0.92148,0.013230000000000075,BelebeleRetrieval
+BelebeleRetrieval | deu_Latn-eng_Latn,0.94574,0.93281,0.012929999999999997,BelebeleRetrieval
+BelebeleRetrieval | fra_Latn-eng_Latn,0.94728,0.9346,0.012680000000000025,BelebeleRetrieval
+STS17 | fr-en,0.832552,0.820855,0.011696999999999957,STS17
+BUCC.v2 | fr-en,0.990627,0.981675,0.008952000000000071,BUCC.v2
+STS17 | es-es,0.880871,0.87355,0.007320999999999911,STS17
+WikipediaRerankingMultilingual | en,0.889223,0.903638,-0.014415000000000067,WikipediaRerankingMultilingual
+STS17 | en-en,0.876358,0.896612,-0.020253999999999994,STS17
+STSES | default,0.750102,0.81362,-0.06351799999999996,STSES
