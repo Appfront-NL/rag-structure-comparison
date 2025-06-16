@@ -32,7 +32,7 @@ The `multiModal/` folder supports evaluation of **text-only embedding models** i
 - `LATE-Large-MM.sh`: Example Slurm script for scheduling a batch run of multimodal evaluations.
 - `ResultsMultiModal/`: Directory where evaluation results are saved per model.
 
-#### 📌 Running `multiModalRun.py`
+#### Running `multiModalRun.py`
 
 To evaluate all models listed in the script, navigate to the `multiModal/` directory and run:
 
