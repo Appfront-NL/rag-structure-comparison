@@ -1,6 +1,6 @@
 # RAG Structure Comparison
 
-This project benchmarks and compares Retrieval-Augmented Generation (RAG) structures across diverse evaluation setups. It is designed to run large-scale, reproducible experiments using `sbatch` on a compute cluster. The focus is currently on multilingual and (soon) multimodal tasks using robust embedding models.
+This project benchmarks and compares Retrieval-Augmented Generation (RAG) structures across diverse evaluation setups. It is designed to run large-scale, reproducible experiments using `sbatch` on a compute cluster. The focus is currently on multilingual and multimodal tasks using robust embedding models.
 
 ---
 
@@ -18,8 +18,8 @@ This folder contains all experiments related to multilingual evaluations using t
   - `SH_TEMPLATE.sh`: Template used to generate Slurm `.sh` jobs
   - `python_tasks/`: Auto-generated Python scripts, one for each task and model
   - `shell_jobs/`: Auto-generated Slurm `.sh` scripts to run each experiment
-  - `logs/`: Output and error logs for each job (named by job ID)
-  - `results/`: Generated `.csv` files with evaluation metrics for each run
+  - `logs/`: Output and console logs for each job (named by job ID)
+  - `results/`: Generated `.json` files with evaluation metrics for each run
 
 ### `multiModal/`
 
